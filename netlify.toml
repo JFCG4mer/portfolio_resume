@@ -1,0 +1,59 @@
+# Netlify configuration — jamiecarlson.fyi
+# Static site: no build step, the repo root is published as-is.
+
+[build]
+  publish = "."
+  command = ""
+
+# ---------------------------------------------------------------------------
+# Friendly URL for the résumé.
+# Right now this forwards to the Google Drive copy. Once you drop a PDF into
+# resume/ (see README), change the `to` below to "/resume/Jamie-Carlson-Resume.pdf"
+# and set status = 200 so it serves from your own domain.
+# ---------------------------------------------------------------------------
+[[redirects]]
+  from = "/resume"
+  to = "https://drive.google.com/file/d/1u9_no07YNnlS9O1cdkO1dfUU6ZrArpSP/view"
+  status = 302
+  force = true
+
+# Force the bare apex as canonical (www -> apex)
+[[redirects]]
+  from = "https://www.jamiecarlson.fyi/*"
+  to = "https://jamiecarlson.fyi/:splat"
+  status = 301
+  force = true
+
+# ---------------------------------------------------------------------------
+# Security headers
+# ---------------------------------------------------------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# ---------------------------------------------------------------------------
+# Caching: hash-free filenames, so HTML must revalidate but media can sit.
+# ---------------------------------------------------------------------------
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/config.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/resume/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
