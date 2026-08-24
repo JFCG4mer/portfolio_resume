@@ -63,11 +63,11 @@
 
   <header id="top" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(36px,5vw,72px);align-items:center;padding:clamp(70px,9vw,120px) 0 clamp(70px,9vw,110px)">
     <div style="max-width:760px">
-    <div data-reveal="" style="font-size:12.5px;letter-spacing:0.16em;text-transform:uppercase;color:#1F4E46;margin-bottom:34px">Product Leadership · West Hartford, CT</div>
-    <h1 data-reveal="" style="font-family:Newsreader,serif;font-weight:400;font-size:clamp(40px,7vw,50px);line-height:1.03;letter-spacing:-0.02em;margin:0 0 36px">Twenty-five years building consumer products people come back to.</h1>
-    <p data-reveal="" style="font-size:19px;line-height:1.62;color:#4A4740;max-width:680px;margin:0 0 44px;text-wrap:pretty">Digital media leader focused on consumer-facing product conception, development, management, and strategy. A record of technical innovation and execution, with user engagement driven by continuous improvement and product analytics. Highly collaborative and people-focused.</p>
+    <div data-cms="hero.eyebrow" data-reveal="" style="font-size:12.5px;letter-spacing:0.16em;text-transform:uppercase;color:#1F4E46;margin-bottom:34px">Product Leadership · West Hartford, CT</div>
+    <h1 data-cms="hero.headline" data-reveal="" style="font-family:Newsreader,serif;font-weight:400;font-size:clamp(40px,7vw,50px);line-height:1.03;letter-spacing:-0.02em;margin:0 0 36px">Twenty-five years building consumer products people come back to.</h1>
+    <p data-cms="hero.intro" data-reveal="" style="font-size:19px;line-height:1.62;color:#4A4740;max-width:680px;margin:0 0 44px;text-wrap:pretty">Digital media leader focused on consumer-facing product conception, development, management, and strategy. A record of technical innovation and execution, with user engagement driven by continuous improvement and product analytics. Highly collaborative and people-focused.</p>
     <div data-reveal="" style="display:flex;gap:14px;flex-wrap:wrap">
-      <a href="#work" data-magnetic="" style="display:inline-flex;align-items:center;gap:10px;padding:14px 26px;background:#17181A;color:#F5F2EC;border-radius:2px;font-size:14.5px;letter-spacing:0.02em" style-hover="background:#1F4E46">See the work</a>
+      <a data-cms="hero.cta" href="#work" data-magnetic="" style="display:inline-flex;align-items:center;gap:10px;padding:14px 26px;background:#17181A;color:#F5F2EC;border-radius:2px;font-size:14.5px;letter-spacing:0.02em" style-hover="background:#1F4E46">See the work</a>
       <a data-link="resume" href="https://drive.google.com/file/d/1u9_no07YNnlS9O1cdkO1dfUU6ZrArpSP/view" target="_blank" rel="noopener" data-magnetic="" style="display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border:1px solid rgba(23,24,26,0.22);color:#17181A;border-radius:2px;font-size:14.5px" style-hover="border-color:#17181A;background:rgba(23,24,26,0.04)">Download Resume (PDF)</a>
     </div>
     </div>
@@ -109,8 +109,8 @@
 
   <section id="work" style="padding-bottom:40px">
     <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:48px">
-      <h2 style="font-family:Newsreader,serif;font-weight:400;font-size:34px;margin:0;letter-spacing:-0.01em">Selected work</h2>
-      <span style="font-size:12.5px;letter-spacing:0.14em;text-transform:uppercase;color:#6E6A61">2007 — Present</span>
+      <h2 style="font-family:Newsreader,serif;font-weight:400;font-size:34px;margin:0;letter-spacing:-0.01em" data-cms="sections.workHeading">Selected work</h2>
+      <span style="font-size:12.5px;letter-spacing:0.14em;text-transform:uppercase;color:#6E6A61" data-cms="sections.workMeta">2007 — Present</span>
     </div>
 
     <sc-for list="{{ projectsWithMedia }}" as="p" hint-placeholder-count="1">
@@ -183,7 +183,7 @@
   </section>
 
   <section id="experience" style="padding:130px 0 40px">
-    <h2 style="font-family:Newsreader,serif;font-weight:400;font-size:34px;margin:0 0 48px;letter-spacing:-0.01em">Experience</h2>
+    <h2 style="font-family:Newsreader,serif;font-weight:400;font-size:34px;margin:0 0 48px;letter-spacing:-0.01em" data-cms="sections.experienceHeading">Experience</h2>
     <sc-for list="{{ roles }}" as="r" hint-placeholder-count="8">
       <div data-reveal="" data-row="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px 32px;padding:26px 12px 26px 0;border-top:1px solid rgba(23,24,26,0.12);transition:background 260ms ease,padding 260ms ease" style-hover="background:rgba(31,78,70,0.05);padding-left:12px">
         <div style="font-size:13.5px;color:#6E6A61;padding-top:4px">{{ r.dates }}</div>
@@ -203,23 +203,23 @@
   <section id="resume" style="padding:130px 0 40px">
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:44px 56px;align-items:start">
       <div style="position:sticky;top:110px">
-        <h2 style="font-family:Newsreader,serif;font-weight:400;font-size:34px;margin:0 0 18px;letter-spacing:-0.01em">Resume</h2>
-        <p style="font-size:16px;line-height:1.6;color:#4A4740;margin:0 0 24px">Education, certification, and the products behind the work.</p>
+        <h2 style="font-family:Newsreader,serif;font-weight:400;font-size:34px;margin:0 0 18px;letter-spacing:-0.01em" data-cms="sections.resumeHeading">Resume</h2>
+        <p style="font-size:16px;line-height:1.6;color:#4A4740;margin:0 0 24px" data-cms="sections.resumeIntro">Education, certification, and the products behind the work.</p>
         <div style="display:flex;flex-direction:column;align-items:flex-start;gap:12px"><a data-link="resume" href="https://drive.google.com/file/d/1u9_no07YNnlS9O1cdkO1dfUU6ZrArpSP/view" target="_blank" rel="noopener" data-magnetic="" style="display:inline-flex;align-items:center;padding:14px 26px;background:#17181A;color:#F5F2EC;border-radius:2px;font-size:14.5px" style-hover="background:#1F4E46">Download PDF</a><a data-link="portfolioPdf" href="/resume/Jamie-Carlson-Product-Portfolio.pdf" target="_blank" rel="noopener" data-magnetic="" style="display:inline-flex;align-items:center;padding:14px 26px;border:1px solid rgba(23,24,26,0.28);color:#17181A;border-radius:2px;font-size:14.5px;text-decoration:none;transition:background 200ms ease,border-color 200ms ease" style-hover="border-color:#17181A;background:rgba(23,24,26,0.05)">Download Product Portfolio (PDF)</a></div>
       </div>
       <div style="display:flex;flex-direction:column;gap:38px">
         <div data-reveal="">
-          <div style="font-size:12.5px;letter-spacing:0.14em;text-transform:uppercase;color:#1F4E46;margin-bottom:14px">Education</div>
-          <div style="font-family:Newsreader,serif;font-size:24px">Worcester Polytechnic Institute</div>
-          <p style="font-size:16px;line-height:1.6;color:#4A4740;margin:8px 0 0">B.S. Computer Science, May 1999. Graduated with Distinction. Worcester, MA.</p>
+          <div style="font-size:12.5px;letter-spacing:0.14em;text-transform:uppercase;color:#1F4E46;margin-bottom:14px" data-cms="resumeDetails.educationLabel">Education</div>
+          <div data-cms="resumeDetails.school" style="font-family:Newsreader,serif;font-size:24px">Worcester Polytechnic Institute</div>
+          <p style="font-size:16px;line-height:1.6;color:#4A4740;margin:8px 0 0" data-cms="resumeDetails.schoolDetail">B.S. Computer Science, May 1999. Graduated with Distinction. Worcester, MA.</p>
         </div>
         <div data-reveal="">
-          <div style="font-size:12.5px;letter-spacing:0.14em;text-transform:uppercase;color:#1F4E46;margin-bottom:14px">Certification</div>
-          <p style="font-size:16px;line-height:1.6;color:#4A4740;margin:0">SAFe 4 Product Owner / Product Manager, August 2018.</p>
+          <div style="font-size:12.5px;letter-spacing:0.14em;text-transform:uppercase;color:#1F4E46;margin-bottom:14px" data-cms="resumeDetails.certLabel">Certification</div>
+          <p style="font-size:16px;line-height:1.6;color:#4A4740;margin:0" data-cms="resumeDetails.cert">SAFe 4 Product Owner / Product Manager, August 2018.</p>
         </div>
         <div data-reveal="">
-          <div style="font-size:12.5px;letter-spacing:0.14em;text-transform:uppercase;color:#1F4E46;margin-bottom:14px">Products</div>
-          <div style="display:flex;flex-direction:column;gap:12px;font-size:16px">
+          <div style="font-size:12.5px;letter-spacing:0.14em;text-transform:uppercase;color:#1F4E46;margin-bottom:14px" data-cms="resumeDetails.productsLabel">Products</div>
+          <div data-cms-list="resumeDetails.products" style="display:flex;flex-direction:column;gap:12px;font-size:16px">
             <a href="https://www.metacritic.com/company/sonalysts" target="_blank" rel="noopener">Game reviews on Metacritic</a>
             <a href="https://store.steampowered.com/search/?developer=Sonalysts" target="_blank" rel="noopener">Sonalysts titles on Steam</a>
           </div>
@@ -230,14 +230,14 @@
 
 
   <section id="contact" style="position:relative;margin:120px calc(-1 * clamp(20px,5vw,40px)) 0;padding:clamp(70px,9vw,110px) clamp(20px,5vw,40px) 70px;background:#17251F;color:#F5F2EC;border-radius:4px">
-    <h2 style="font-family:Newsreader,serif;font-weight:400;font-size:clamp(34px,5vw,60px);line-height:1.1;margin:0 0 28px;max-width:760px;letter-spacing:-0.02em">Open to product leadership roles.</h2>
+    <h2 style="font-family:Newsreader,serif;font-weight:400;font-size:clamp(34px,5vw,60px);line-height:1.1;margin:0 0 28px;max-width:760px;letter-spacing:-0.02em" data-cms="sections.contactHeading">Open to product leadership roles.</h2>
     <div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:70px">
       <a data-link="linkedin" href="https://www.linkedin.com/in/jamie-carlson-b480341/" target="_blank" rel="noopener" data-magnetic="" style="display:inline-flex;padding:14px 26px;background:#F5F2EC;color:#17251F;border-radius:2px;font-size:14.5px;font-weight:500" style-hover="background:#D9CFA8">Connect on LinkedIn</a>
       <a data-link="resume" href="https://drive.google.com/file/d/1u9_no07YNnlS9O1cdkO1dfUU6ZrArpSP/view" target="_blank" rel="noopener" data-magnetic="" style="display:inline-flex;padding:14px 26px;border:1px solid rgba(245,242,236,0.32);color:#F5F2EC;border-radius:2px;font-size:14.5px" style-hover="border-color:#F5F2EC;background:rgba(245,242,236,0.08)">Resume (PDF)</a>
       <a data-link="portfolioPdf" href="https://docs.google.com/presentation/d/1uvMGs3uRrxjWqZL_B7b4cvCB9djvstx91inFUwFNdYI/edit" target="_blank" rel="noopener" data-magnetic="" style="display:inline-flex;padding:14px 26px;border:1px solid rgba(245,242,236,0.32);color:#F5F2EC;border-radius:2px;font-size:14.5px" style-hover="border-color:#F5F2EC;background:rgba(245,242,236,0.08)">View product portfolio</a>
     </div>
     <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px;color:rgba(245,242,236,0.55);flex-wrap:wrap;gap:12px;padding-top:26px;border-top:1px solid rgba(245,242,236,0.16)">
-      <span>© 2026 Jamie Carlson</span>
+      <span data-cms="sections.copyright">© 2026 Jamie Carlson</span>
       <span>jamiecarlson.fyi</span>
     </div>
   </section>
@@ -276,6 +276,28 @@ class Component extends DCLogic {
         el.style.backgroundPosition = 'center';
         const mono = el.querySelector('span');
         if (mono) mono.style.display = 'none';
+      });
+    });
+    // Text bound to JSON via a data-cms attribute holding a dotted key path.
+    // If the key is missing the markup's own text stays, so nothing ever blanks out.
+    const dig = (obj, path) => path.split('.').reduce((a, k) => (a && a[k] !== undefined ? a[k] : undefined), obj);
+    root.querySelectorAll('[data-cms]').forEach(el => {
+      const v = dig(cfg, el.getAttribute('data-cms'));
+      if (typeof v === 'string' && v.trim() && el.textContent !== v) el.textContent = v;
+    });
+    // Link lists bound via data-cms-list
+    root.querySelectorAll('[data-cms-list]').forEach(el => {
+      const items = dig(cfg, el.getAttribute('data-cms-list'));
+      if (!Array.isArray(items) || !items.length) return;
+      const want = items.map(i => i.label + '|' + i.href).join(',');
+      if (el.dataset.built === want) return;
+      el.dataset.built = want;
+      el.innerHTML = '';
+      items.forEach(i => {
+        const a = document.createElement('a');
+        a.href = i.href; a.textContent = i.label;
+        a.target = '_blank'; a.rel = 'noopener';
+        el.appendChild(a);
       });
     });
     const port = root.querySelector('[data-portrait]');

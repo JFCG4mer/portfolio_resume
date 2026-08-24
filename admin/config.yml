@@ -16,6 +16,47 @@ collections:
         file: content/site.json
         description: Résumé link, LinkedIn, email, portrait, and nav.
         fields:
+          - name: hero
+            label: Hero (top of page)
+            widget: object
+            fields:
+              - { name: eyebrow, label: Eyebrow, widget: string }
+              - { name: headline, label: Headline, widget: text }
+              - { name: intro, label: Intro paragraph, widget: text }
+              - { name: cta, label: Button label, widget: string }
+
+          - name: sections
+            label: Section headings
+            widget: object
+            collapsed: true
+            fields:
+              - { name: workHeading, label: Work heading, widget: string }
+              - { name: workMeta, label: Work date range, widget: string }
+              - { name: experienceHeading, label: Experience heading, widget: string }
+              - { name: resumeHeading, label: Resume heading, widget: string }
+              - { name: resumeIntro, label: Resume intro, widget: text }
+              - { name: contactHeading, label: Contact heading, widget: text }
+              - { name: copyright, label: Footer copyright, widget: string }
+
+          - name: resumeDetails
+            label: Education & certification
+            widget: object
+            collapsed: true
+            fields:
+              - { name: educationLabel, label: "Label: education", widget: string }
+              - { name: school, label: School, widget: string }
+              - { name: schoolDetail, label: Degree details, widget: text }
+              - { name: certLabel, label: "Label: certification", widget: string }
+              - { name: cert, label: Certification, widget: text }
+              - { name: productsLabel, label: "Label: products", widget: string }
+              - name: products
+                label: Product links
+                widget: list
+                summary: "{{fields.label}}"
+                fields:
+                  - { name: label, label: Label, widget: string }
+                  - { name: href, label: URL, widget: string }
+
           - { name: portrait, label: Portrait photo, widget: image, required: false }
 
           - name: links

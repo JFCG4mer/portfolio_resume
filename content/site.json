@@ -1,4 +1,37 @@
 {
+  "hero": {
+    "eyebrow": "Product Leadership · West Hartford, CT",
+    "headline": "A career building consumer products that people come back to.",
+    "intro": "Digital media leader focused on consumer-facing product conception, development, management, and strategy. A record of technical innovation and execution, with user engagement driven by continuous improvement and product analytics. Highly collaborative and people-focused.",
+    "cta": "See the work"
+  },
+  "sections": {
+    "workHeading": "Highlighted Products",
+    "workMeta": "2007 — Present",
+    "experienceHeading": "Experience",
+    "resumeHeading": "Resume",
+    "resumeIntro": "Education, certification, and the products behind the work.",
+    "contactHeading": "Open to product leadership roles.",
+    "copyright": "© 2026 Jamie Carlson"
+  },
+  "resumeDetails": {
+    "educationLabel": "Education",
+    "school": "Worcester Polytechnic Institute",
+    "schoolDetail": "B.S. Computer Science, May 1999. Graduated with Distinction. Worcester, MA.",
+    "certLabel": "Certification",
+    "cert": "SAFe 4 Product Owner / Product Manager, August 2018.",
+    "productsLabel": "Products",
+    "products": [
+      {
+        "label": "Game reviews on Metacritic",
+        "href": "https://www.metacritic.com/company/sonalysts"
+      },
+      {
+        "label": "Sonalysts titles on Steam",
+        "href": "https://store.steampowered.com/search/?developer=Sonalysts"
+      }
+    ]
+  },
   "portrait": "images/jamie-carlson.png",
   "links": {
     "resume": "/resume/Jamie-Carlson-Resume.pdf",
