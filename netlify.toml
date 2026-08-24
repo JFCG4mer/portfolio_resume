@@ -13,8 +13,14 @@
 # ---------------------------------------------------------------------------
 [[redirects]]
   from = "/resume"
-  to = "https://drive.google.com/file/d/1u9_no07YNnlS9O1cdkO1dfUU6ZrArpSP/view"
-  status = 302
+  to = "/resume/Jamie-Carlson-Resume.pdf"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/portfolio"
+  to = "/resume/Jamie-Carlson-Product-Portfolio.pdf"
+  status = 200
   force = true
 
 # Force the bare apex as canonical (www -> apex)
@@ -57,3 +63,18 @@
   for = "/resume/*"
   [headers.values]
     Cache-Control = "public, max-age=3600"
+
+# ---------------------------------------------------------------------------
+# CMS + content
+# ---------------------------------------------------------------------------
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Content must never be stale, or edits appear not to have saved.
+[[headers]]
+  for = "/content/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

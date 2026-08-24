@@ -56,7 +56,7 @@
     <div data-nav style="display:flex;gap:28px;align-items:center;font-size:13.5px;letter-spacing:0.04em;text-transform:uppercase">
       <a href="#work" style="color:#6E6A61" style-hover="color:#17181A">Work</a>
       <a href="#experience" style="color:#6E6A61" style-hover="color:#17181A">Experience</a>
-      <a href="#resume" style="color:#6E6A61" style-hover="color:#17181A">Résumé</a>
+      <a href="#resume" style="color:#6E6A61" style-hover="color:#17181A">Resume</a>
       <a href="#contact" style="color:#6E6A61" style-hover="color:#17181A">Contact</a>
     </div>
   </nav>
@@ -68,7 +68,7 @@
     <p data-reveal="" style="font-size:19px;line-height:1.62;color:#4A4740;max-width:680px;margin:0 0 44px;text-wrap:pretty">Digital media leader focused on consumer-facing product conception, development, management, and strategy. A record of technical innovation and execution, with user engagement driven by continuous improvement and product analytics. Highly collaborative and people-focused.</p>
     <div data-reveal="" style="display:flex;gap:14px;flex-wrap:wrap">
       <a href="#work" data-magnetic="" style="display:inline-flex;align-items:center;gap:10px;padding:14px 26px;background:#17181A;color:#F5F2EC;border-radius:2px;font-size:14.5px;letter-spacing:0.02em" style-hover="background:#1F4E46">See the work</a>
-      <a data-link="resume" href="https://drive.google.com/file/d/1u9_no07YNnlS9O1cdkO1dfUU6ZrArpSP/view" target="_blank" rel="noopener" data-magnetic="" style="display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border:1px solid rgba(23,24,26,0.22);color:#17181A;border-radius:2px;font-size:14.5px" style-hover="border-color:#17181A;background:rgba(23,24,26,0.04)">Download résumé (PDF)</a>
+      <a data-link="resume" href="https://drive.google.com/file/d/1u9_no07YNnlS9O1cdkO1dfUU6ZrArpSP/view" target="_blank" rel="noopener" data-magnetic="" style="display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border:1px solid rgba(23,24,26,0.22);color:#17181A;border-radius:2px;font-size:14.5px" style-hover="border-color:#17181A;background:rgba(23,24,26,0.04)">Download Resume (PDF)</a>
     </div>
     </div>
     <div data-reveal="" style="position:relative;justify-self:center;width:100%;max-width:380px">
@@ -123,7 +123,7 @@
                   <video data-shot src="{{ s.src }}" controls playsinline preload="metadata" style="max-width:100%;max-height:100%;display:block"></video>
                 </sc-if>
                 <sc-if value="{{ s.isImage }}" hint-placeholder-val="{{ true }}">
-                  <img data-shot src="{{ s.src }}" alt="{{ s.alt }}" loading="lazy" style="max-width:100%;max-height:100%;object-fit:contain;display:block">
+                  <img data-shot src="{{ s.src }}" alt="{{ s.alt }}" loading="lazy" style="max-width:100%;max-height:100%;object-fit:contain;display:block;cursor:zoom-in">
                 </sc-if>
               </div>
             </sc-for>
@@ -150,7 +150,7 @@
             <p style="font-size:17px;line-height:1.65;color:#4A4740;margin:0 0 24px;text-wrap:pretty">{{ p.body }}</p>
             <div style="display:flex;gap:22px;flex-wrap:wrap;font-size:14px">
               <sc-for list="{{ p.links }}" as="l" hint-placeholder-count="2">
-                <a href="{{ l.href }}" target="_blank" rel="noopener" style="border-bottom:1px solid rgba(31,78,70,0.35);padding-bottom:2px">{{ l.label }}</a>
+                <a href="{{ l.href }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;padding:7px 15px;border:1px solid rgba(31,78,70,0.30);border-radius:999px;font-size:13.5px;line-height:1;color:#1F4E46;text-decoration:none;white-space:nowrap;transition:background 180ms ease,border-color 180ms ease,color 180ms ease" style-hover="background:#1F4E46;border-color:#1F4E46;color:#F5F2EC">{{ l.label }}</a>
               </sc-for>
             </div>
           </div>
@@ -173,7 +173,7 @@
             <p style="font-size:17px;line-height:1.65;color:#4A4740;margin:0 0 24px;text-wrap:pretty">{{ p.body }}</p>
             <div style="display:flex;gap:22px;flex-wrap:wrap;font-size:14px">
               <sc-for list="{{ p.links }}" as="l" hint-placeholder-count="2">
-                <a href="{{ l.href }}" target="_blank" rel="noopener" style="border-bottom:1px solid rgba(31,78,70,0.35);padding-bottom:2px">{{ l.label }}</a>
+                <a href="{{ l.href }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;padding:7px 15px;border:1px solid rgba(31,78,70,0.30);border-radius:999px;font-size:13.5px;line-height:1;color:#1F4E46;text-decoration:none;white-space:nowrap;transition:background 180ms ease,border-color 180ms ease,color 180ms ease" style-hover="background:#1F4E46;border-color:#1F4E46;color:#F5F2EC">{{ l.label }}</a>
               </sc-for>
             </div>
           </div>
@@ -203,9 +203,9 @@
   <section id="resume" style="padding:130px 0 40px">
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:44px 56px;align-items:start">
       <div style="position:sticky;top:110px">
-        <h2 style="font-family:Newsreader,serif;font-weight:400;font-size:34px;margin:0 0 18px;letter-spacing:-0.01em">Résumé</h2>
+        <h2 style="font-family:Newsreader,serif;font-weight:400;font-size:34px;margin:0 0 18px;letter-spacing:-0.01em">Resume</h2>
         <p style="font-size:16px;line-height:1.6;color:#4A4740;margin:0 0 24px">Education, certification, and the products behind the work.</p>
-        <a data-link="resume" href="https://drive.google.com/file/d/1u9_no07YNnlS9O1cdkO1dfUU6ZrArpSP/view" target="_blank" rel="noopener" data-magnetic="" style="display:inline-flex;align-items:center;padding:14px 26px;background:#17181A;color:#F5F2EC;border-radius:2px;font-size:14.5px" style-hover="background:#1F4E46">Download PDF</a>
+        <div style="display:flex;flex-direction:column;align-items:flex-start;gap:12px"><a data-link="resume" href="https://drive.google.com/file/d/1u9_no07YNnlS9O1cdkO1dfUU6ZrArpSP/view" target="_blank" rel="noopener" data-magnetic="" style="display:inline-flex;align-items:center;padding:14px 26px;background:#17181A;color:#F5F2EC;border-radius:2px;font-size:14.5px" style-hover="background:#1F4E46">Download PDF</a><a data-link="portfolioPdf" href="/resume/Jamie-Carlson-Product-Portfolio.pdf" target="_blank" rel="noopener" data-magnetic="" style="display:inline-flex;align-items:center;padding:14px 26px;border:1px solid rgba(23,24,26,0.28);color:#17181A;border-radius:2px;font-size:14.5px;text-decoration:none;transition:background 200ms ease,border-color 200ms ease" style-hover="border-color:#17181A;background:rgba(23,24,26,0.05)">Download Product Portfolio (PDF)</a></div>
       </div>
       <div style="display:flex;flex-direction:column;gap:38px">
         <div data-reveal="">
@@ -233,7 +233,7 @@
     <h2 style="font-family:Newsreader,serif;font-weight:400;font-size:clamp(34px,5vw,60px);line-height:1.1;margin:0 0 28px;max-width:760px;letter-spacing:-0.02em">Open to product leadership roles.</h2>
     <div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:70px">
       <a data-link="linkedin" href="https://www.linkedin.com/in/jamie-carlson-b480341/" target="_blank" rel="noopener" data-magnetic="" style="display:inline-flex;padding:14px 26px;background:#F5F2EC;color:#17251F;border-radius:2px;font-size:14.5px;font-weight:500" style-hover="background:#D9CFA8">Connect on LinkedIn</a>
-      <a data-link="resume" href="https://drive.google.com/file/d/1u9_no07YNnlS9O1cdkO1dfUU6ZrArpSP/view" target="_blank" rel="noopener" data-magnetic="" style="display:inline-flex;padding:14px 26px;border:1px solid rgba(245,242,236,0.32);color:#F5F2EC;border-radius:2px;font-size:14.5px" style-hover="border-color:#F5F2EC;background:rgba(245,242,236,0.08)">Résumé (PDF)</a>
+      <a data-link="resume" href="https://drive.google.com/file/d/1u9_no07YNnlS9O1cdkO1dfUU6ZrArpSP/view" target="_blank" rel="noopener" data-magnetic="" style="display:inline-flex;padding:14px 26px;border:1px solid rgba(245,242,236,0.32);color:#F5F2EC;border-radius:2px;font-size:14.5px" style-hover="border-color:#F5F2EC;background:rgba(245,242,236,0.08)">Resume (PDF)</a>
       <a data-link="portfolioPdf" href="https://docs.google.com/presentation/d/1uvMGs3uRrxjWqZL_B7b4cvCB9djvstx91inFUwFNdYI/edit" target="_blank" rel="noopener" data-magnetic="" style="display:inline-flex;padding:14px 26px;border:1px solid rgba(245,242,236,0.32);color:#F5F2EC;border-radius:2px;font-size:14.5px" style-hover="border-color:#F5F2EC;background:rgba(245,242,236,0.08)">View product portfolio</a>
     </div>
     <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px;color:rgba(245,242,236,0.55);flex-wrap:wrap;gap:12px;padding-top:26px;border-top:1px solid rgba(245,242,236,0.16)">
@@ -304,6 +304,9 @@ class Component extends DCLogic {
 
   componentDidMount() {
     const root = document.body;
+    if (window.SITE_CONFIG_READY && !window.SITE_CONFIG) {
+      window.SITE_CONFIG_READY.then(() => { this.applyConfig(); this.forceUpdate(); });
+    }
     if (!this.applyConfig()) {
       let tries = 0;
       const wait = setInterval(() => {
@@ -509,6 +512,11 @@ class Component extends DCLogic {
         setCar(car, all.indexOf(dot));
         return;
       }
+      const shotHit = t.closest && t.closest('[data-shot]');
+      if (shotHit && lb.style.display !== 'flex' && shotHit.tagName !== 'VIDEO') {
+        const car = shotHit.closest('[data-carousel]');
+        if (car && open(car, filledIndexAt(car, carPos.get(car) || 0))) return;
+      }
       const ex = t.closest && t.closest('[data-expand]');
       if (ex) {
         const car = ex.closest('[data-carousel]');
@@ -639,7 +647,7 @@ class Component extends DCLogic {
     const VIDEO = /\.(webm|mp4|mov|m4v)(\?.*)?$/i;
     const logoKeyOf = (p) => (p.iconId || '').replace('logo-', '');
     const withLinks = (list) => list.map(p => {
-      const files = Array.isArray(media[p.key]) ? media[p.key].filter(Boolean) : [];
+      const files = Array.isArray(p.media) ? p.media.filter(Boolean) : (Array.isArray(media[p.key]) ? media[p.key].filter(Boolean) : []);
       const shots = files.map((src, i) => ({
         src: src,
         isVideo: VIDEO.test(src),
@@ -654,34 +662,11 @@ class Component extends DCLogic {
         logo: logos[logoKeyOf(p)] || ''
       });
     });
-    const all = withLinks([
-        { key: 'fox', iconId: 'logo-fox', mark: 'FOX', brand: '#0B2C6B', org: 'FOX Sports', title: 'FOXSports.com & Super 6', role: 'Director of Product Management · 2022 — Present', body: 'Product lead for the FOXSports.com and Super 6 interactive teams. Manage the product managers responsible for feature development and SEO content strategy, working across business development, PMO, marketing, design, tech, and QA. Collaborate on digital strategy with the executive leadership team and mentor product owners through shifting priorities.', links: [{ href: 'https://www.foxsports.com', label: 'foxsports.com' }, { href: 'https://www.foxsports.com/fox-super-6/', label: 'Super 6' }, { href: 'https://apps.apple.com/us/app/fox-sports-watch-live/id294056623', label: 'iOS' }, { href: 'https://play.google.com/store/apps/details?id=com.foxsports.android', label: 'Android' }], shots: [{ id: 'fox-1', ph: 'Drop the main FOXSports.com & Super 6 image' }, { id: 'fox-2', ph: 'Drop image 2' }, { id: 'fox-3', ph: 'Drop image 3' }, { id: 'fox-4', ph: 'Drop image 4' }], shotCount: 4 },
-        { key: 'gc', iconId: 'logo-gc', mark: 'GC', brand: '#C24A28', org: 'GameChanger', title: 'Acquisition & Organizations', role: 'Director of Product Management · 2021 — 2022', body: 'Led the acquisition and growth team onboarding coaches and league admins onto the platform, and drove the release of a new Organizations capability used by leagues, travel team organizations, and tournaments. Released head-to-head scorekeeping that synchronizes scoring data across both participating teams.', links: [{ href: 'https://gc.com/', label: 'gc.com' }, { href: 'https://apps.apple.com/app/apple-store/id1308415878', label: 'iOS' }, { href: 'https://play.google.com/store/apps/details?id=com.gc.teammanager', label: 'Android' }], shots: [{ id: 'gc-1', ph: 'Drop the main Acquisition & Organizations image' }, { id: 'gc-2', ph: 'Drop image 2' }, { id: 'gc-3', ph: 'Drop image 3' }], shotCount: 3 },
-        { key: 'lego', iconId: 'logo-lego', mark: 'LG', brand: '#D19A16', org: 'The LEGO Group', title: 'LEGO Batman Movie app', role: 'Senior Digital Producer · 2015 — 2018', body: 'Led development of the LEGO Batman Movie iOS and Android apps with Warner Brothers. Launched globally on January 10, 2017 and reached 2.3 million downloads in the first thirty days.', links: [{ href: 'https://www.warnerbros.com/games-and-apps/lego-batman-movie-game', label: 'Warner Bros.' }, { href: 'https://www.youtube.com/watch?v=ZZTKTcR3pyk', label: 'Gameplay' }, { href: 'https://www.youtube.com/watch?v=qkjauv8nzbM', label: 'Trailer' }], shots: [{ id: 'lego-1', ph: 'Drop the main LEGO Batman Movie app image' }, { id: 'lego-2', ph: 'Drop image 2' }, { id: 'lego-3', ph: 'Drop image 3' }], shotCount: 3 },
-        { key: 'legosw', iconId: 'logo-lego', mark: 'LG', brand: '#D19A16', org: 'The LEGO Group', title: 'LEGO Star Wars AR & 360', role: 'Senior Digital Producer · 2015 — 2018', body: 'Ideation and execution of digital products across the LEGO Star Wars franchise: The Last Jedi 360 experience, the voice-activated Battle Run, LEGO AR Playgrounds, and the LEGO.com franchise sites.', links: [{ href: 'https://www.youtube.com/watch?v=IMMIi1u2HjI', label: 'Battle Run' }, { href: 'https://www.youtube.com/shorts/mj7Leyaq780', label: '360 experience' }, { href: 'https://apps.apple.com/us/app/lego-hidden-side/id1450381018', label: 'AR Playgrounds' }], shots: [{ id: 'legosw-1', ph: 'Drop the main LEGO Star Wars AR & 360 image' }, { id: 'legosw-2', ph: 'Drop image 2' }, { id: 'legosw-3', ph: 'Drop image 3' }], shotCount: 3 },
-        { key: 'espntc', iconId: 'logo-espn', mark: 'ES', brand: '#A81D2E', org: 'ESPN', title: 'Tournament Challenge', role: 'Director of Product Management · 2007 — 2015', body: 'The #1 NCAA tournament bracket game, available on web, mobile web, iPhone, iPad, and Android. Continued growth from 2008 to 2014, ultimately exceeding 10 million brackets. Led development of the iOS and Android apps from 2011 to 2014.', links: [{ href: 'https://apps.apple.com/us/app/espn-tournament-challenge/id359891723', label: 'App Store' }, { href: 'https://youtu.be/znsbKpUrsXo', label: '“Choose Wisely”' }], shots: [{ id: 'espntc-1', ph: 'Drop the main Tournament Challenge image' }, { id: 'espntc-2', ph: 'Drop image 2' }, { id: 'espntc-3', ph: 'Drop image 3' }], shotCount: 3 },
-        { key: 'espnstreak', iconId: 'logo-espn', mark: 'ES', brand: '#A81D2E', org: 'ESPN', title: 'Streak for the Cash and Fantasy Engines', role: 'Director of Product Management · 2008 — 2015', body: 'Led development of Streak for the Cash from 2008 to 2015, amassing 6.4 million users across web, mobile web, standalone apps, and the ESPN Fantasy app. Part of a portfolio of gaming engines spanning Bracket, Pick’em, Roster, Rank’em, and Trivia.', links: [{ href: 'https://www.espn.com/fantasy/', label: 'espn.com/fantasy' }, { href: 'https://youtu.be/2h1F1mT6FjY', label: '“What Would Flo Do?”' }], shots: [{ id: 'espnstreak-1', ph: 'Drop the main Streak for the Cash image' }, { id: 'espnstreak-2', ph: 'Drop image 2' }, { id: 'espnstreak-3', ph: 'Drop image 3' }], shotCount: 3 },
-        { key: 'trav', iconId: 'logo-trav', mark: 'TR', brand: '#B01F32', org: 'Travelers', title: 'MyTravelers', role: 'eBusiness Director of Product · 2018 — 2020', body: 'Responsible for the MyTravelers.com self-service platform across Personal and Business Insurance, with both business and technical accountability. Managed two scrum teams and participated in portfolio planning to shape platform strategy and roadmap.', links: [{ href: 'https://apps.apple.com/us/app/travelers-mobile/id354604876', label: 'App Store' }, { href: 'https://play.google.com/store/apps/details?id=com.travelers.digitalservice', label: 'Google Play' }], shots: [{ id: 'trav-1', ph: 'Drop the main MyTravelers self-service image' }, { id: 'trav-2', ph: 'Drop image 2' }, { id: 'trav-3', ph: 'Drop image 3' }], shotCount: 3 },
-        { key: 'esi', iconId: 'logo-esi', mark: 'ES', brand: '#0F5A9E', org: 'Express Scripts / Cigna', title: 'Express Scripts', role: 'Agile Product Director · 2020 — 2021', body: 'Managed the business product owners behind the Express-Scripts.com customer portal, setting self-service strategy focused on patient capability, reducing customer care call volume, and driving margin opportunities.', links: [{ href: 'https://www.express-scripts.com', label: 'express-scripts.com' }], shots: [{ id: 'esi-1', ph: 'Drop the main Express-Scripts.com portal image' }, { id: 'esi-2', ph: 'Drop image 2' }, { id: 'esi-3', ph: 'Drop image 3' }], shotCount: 3 },
-        { key: 'sona', iconId: 'logo-sona', mark: 'SO', brand: '#2E4A5C', org: 'Sonalysts', title: 'Dangerous Waters & Fleet Command', role: 'Senior Game Producer / Lead Designer · 1998 — 2007', body: 'Managed the design, development, and publishing of Dangerous Waters, and contributed to Sub Command and Jane’s Fleet Command for Electronic Arts. Established publishing agreements with Strategy First and Steam.', links: [{ href: 'https://store.steampowered.com/search/?developer=Sonalysts', label: 'Steam' }, { href: 'https://www.metacritic.com/company/sonalysts', label: 'Metacritic' }], shots: [{ id: 'sona-1', ph: 'Drop the main Dangerous Waters & Fleet Command image' }, { id: 'sona-2', ph: 'Drop image 2' }, { id: 'sona-3', ph: 'Drop image 3' }], shotCount: 3 }
-    ]);
+    const all = withLinks(Array.isArray(cfg.projects) ? cfg.projects : []);
     return {
       projectsWithMedia: all.filter(p => p.hasMedia),
       projectsWithoutMedia: all.filter(p => !p.hasMedia),
-      roles: this.withLogos([
-        { dates: '11/2022 — Present', company: 'FOX Sports', iconId: 'logo-fox', mark: 'FOX', brand: '#0B2C6B', place: 'West Hartford, CT', title: 'Director of Product Management', note: 'Product lead for FOXSports.com and Super 6. Manage the PMs behind feature development and SEO content strategy; collaborate on digital strategy with executive leadership.' },
-        { dates: '05/2021 — 11/2022', company: 'GameChanger', iconId: 'logo-gc', mark: 'GC', brand: '#C24A28', place: 'West Hartford, CT', title: 'Director of Product Management', note: 'Product lead for the acquisition and growth team. Owned roadmap and quarterly OKRs; released Organizations and head-to-head scorekeeping.' },
-        { dates: '08/2020 — 05/2021', company: 'Express Scripts / Cigna', iconId: 'logo-esi', mark: 'ES', brand: '#0F5A9E', place: 'West Hartford, CT', title: 'Agile Product Director', note: 'Managed business product owners for the Express-Scripts.com customer portal and drove quarterly portfolio planning and prioritization.' },
-        { dates: '04/2018 — 08/2020', company: 'Travelers', iconId: 'logo-trav', mark: 'TR', brand: '#B01F32', place: 'Hartford, CT', title: 'eBusiness Director of Product (SAFe PM)', note: 'Owned MyTravelers.com development across Personal and Business Insurance; managed two scrum teams and participated in portfolio planning.' },
-        { dates: '10/2015 — 04/2018', company: 'LEGO Systems Inc.', iconId: 'logo-lego', mark: 'LG', brand: '#D19A16', place: 'Enfield, CT', title: 'Senior Digital Producer (SAFe PM)', note: 'Ideation and execution of digital products across LEGO Superheroes, Batman Movie, and Star Wars on LEGO.com, iOS, and Android. Partnered with LEGO Global Marketing in Denmark.' },
-        { dates: '01/2015 — 10/2015', company: 'ESPN Inc.', iconId: 'logo-espn', mark: 'ES', brand: '#A81D2E', place: 'Bristol, CT', title: 'Director, Consumer Technology Operations', note: 'Created and led a team of 10 developers supporting all digital properties built by ESPN Consumer Software Engineering.' },
-        { dates: '07/2013 — 01/2015', company: 'ESPN Inc.', iconId: 'logo-espn', mark: 'ES', brand: '#A81D2E', place: 'Bristol, CT', title: 'Director of Product Management, Fantasy Games', note: 'Managed all phases of product development and owned strategy and roadmaps. Used Omniture, Localytics, comScore, and A/B testing to drive decisions.' },
-        { dates: '12/2010 — 07/2013', company: 'ESPN Inc.', iconId: 'logo-espn', mark: 'ES', brand: '#A81D2E', place: 'Bristol, CT', title: 'Director of Product Development, Fantasy Games', note: 'Led developers and designers across the Bracket, Pick\u2019em, Roster, Streak, Rank\u2019em, and Trivia engines. Contributed to a record $41M in digital sponsorship revenue in FY 2012.' },
-        { dates: '02/2007 — 12/2010', company: 'ESPN Inc.', iconId: 'logo-espn', mark: 'ES', brand: '#A81D2E', place: 'Bristol, CT', title: 'Product Manager and Developer, Fantasy Games', note: 'Development and maintenance of all Fantasy Minigame products on ESPN.com and the iOS/Android app stores.' },
-        { dates: '02/2003 — 02/2007', company: 'Sonalysts Inc.', iconId: 'logo-sona', mark: 'SO', brand: '#2E4A5C', place: 'Waterford, CT', title: 'Senior Game Producer / Lead Designer', note: 'Managed design, development, and publishing of Dangerous Waters; negotiated retail and digital distribution with Strategy First and Steam.' },
-        { dates: '07/2002 — 01/2003', company: 'VTech Inc.', iconId: 'logo-vtech', mark: 'VT', brand: '#5B3E8E', place: 'Norwalk, CT', title: 'Interactive Designer / Associate Producer', note: 'Drove design, prototyping, and development of three older-age product lines and created a development process for a line of toys and expansion cartridges.' },
-        { dates: '05/1998 — 07/2002', company: 'Sonalysts Inc.', iconId: 'logo-sona', mark: 'SO', brand: '#2E4A5C', place: 'Waterford, CT', title: 'Lead Game Designer / Game Developer', note: 'Drove design and development of Sub Command, and contributed to Jane\u2019s Fleet Command and Jane\u2019s 688(i) Hunter/Killer for Electronic Arts.' }
-      ])
+      roles: this.withLogos(Array.isArray(cfg.roles) ? cfg.roles : [])
     };
   }
 }

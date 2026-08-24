@@ -1,0 +1,418 @@
+{
+  "portrait": "images/jamie-carlson.png",
+  "links": {
+    "resume": "/resume/Jamie-Carlson-Resume.pdf",
+    "portfolioPdf": "/resume/Jamie-Carlson-Product-Portfolio.pdf",
+    "linkedin": "https://www.linkedin.com/in/jamie-carlson-b480341/",
+    "email": "jamiecarlson@gmail.com"
+  },
+  "labels": {
+    "resume": "Download Resume (PDF)",
+    "portfolioPdf": "Download Product Portfolio (PDF)",
+    "linkedin": "Connect on LinkedIn"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "#work"
+    },
+    {
+      "label": "Experience",
+      "href": "#experience"
+    },
+    {
+      "label": "Resume",
+      "href": "#resume"
+    },
+    {
+      "label": "Contact",
+      "href": "#contact"
+    }
+  ],
+  "logos": {
+    "fox": "images/logos/fox.webp",
+    "gc": "images/logos/gc.webp",
+    "esi": "images/logos/esi.webp",
+    "trav": "images/logos/trav.webp",
+    "lego": "images/logos/lego.webp",
+    "espn": "images/logos/espn.webp",
+    "sona": "images/logos/sona.webp",
+    "vtech": "images/logos/vtech.webp"
+  },
+  "projects": [
+    {
+      "key": "fox",
+      "org": "FOX Sports",
+      "title": "FOXSports.com & Super 6",
+      "role": "Director of Product Management · 2022 — Present",
+      "body": "Product lead for the FOXSports.com and Super 6 interactive teams. Manage the product managers responsible for feature development and SEO content strategy, working across business development, PMO, marketing, design, tech, and QA. Collaborate on digital strategy with the executive leadership team and mentor product owners through shifting priorities.",
+      "media": [
+        "images/fox/FOX_SPT_1280px.jpg",
+        "images/fox/FOX_SPT_S6_1280px.jpg"
+      ],
+      "links": [
+        {
+          "label": "foxsports.com",
+          "href": "https://www.foxsports.com"
+        },
+        {
+          "label": "Super 6",
+          "href": "https://www.foxsports.com/fox-super-6/"
+        },
+        {
+          "label": "iOS",
+          "href": "https://apps.apple.com/us/app/fox-sports-watch-live/id294056623"
+        },
+        {
+          "label": "Android",
+          "href": "https://play.google.com/store/apps/details?id=com.foxsports.android"
+        }
+      ],
+      "iconId": "logo-fox",
+      "mark": "FOX",
+      "brand": "#0B2C6B",
+      "shotCount": 4
+    },
+    {
+      "key": "gc",
+      "org": "GameChanger",
+      "title": "Acquisition & Organizations",
+      "role": "Director of Product Management · 2021 — 2022",
+      "body": "Led the acquisition and growth team onboarding coaches and league admins onto the platform, and drove the release of a new Organizations capability used by leagues, travel team organizations, and tournaments. Released head-to-head scorekeeping that synchronizes scoring data across both participating teams.",
+      "media": [
+        "images/gc/GC_1280px.jpg"
+      ],
+      "links": [
+        {
+          "label": "gc.com",
+          "href": "https://gc.com/"
+        },
+        {
+          "label": "iOS",
+          "href": "https://apps.apple.com/app/apple-store/id1308415878"
+        },
+        {
+          "label": "Android",
+          "href": "https://play.google.com/store/apps/details?id=com.gc.teammanager"
+        }
+      ],
+      "iconId": "logo-gc",
+      "mark": "GC",
+      "brand": "#C24A28",
+      "shotCount": 3
+    },
+    {
+      "key": "lego",
+      "org": "The LEGO Group",
+      "title": "LEGO Batman Movie app",
+      "role": "Senior Digital Producer · 2015 — 2018",
+      "body": "Led development of the LEGO Batman Movie iOS and Android apps with Warner Brothers. Launched globally on January 10, 2017 and reached 2.3 million downloads in the first thirty days.",
+      "media": [
+        "images/lego/LEGO_1_1280px.jpg",
+        "images/lego/LEGO_2_1280px.jpg",
+        "images/lego/LEGO_10_1280px.jpg",
+        "images/lego/LEGO_11_LEGO_9_1280px.jpg",
+        "images/lego/LEGO_11B_1280px.jpg",
+        "images/lego/LEGO_12_1280px.jpg"
+      ],
+      "links": [
+        {
+          "label": "Warner Bros.",
+          "href": "https://www.warnerbros.com/games-and-apps/lego-batman-movie-game"
+        },
+        {
+          "label": "Gameplay",
+          "href": "https://www.youtube.com/watch?v=ZZTKTcR3pyk"
+        },
+        {
+          "label": "Trailer",
+          "href": "https://www.youtube.com/watch?v=qkjauv8nzbM"
+        }
+      ],
+      "iconId": "logo-lego",
+      "mark": "LG",
+      "brand": "#D19A16",
+      "shotCount": 3
+    },
+    {
+      "key": "legosw",
+      "org": "The LEGO Group",
+      "title": "LEGO Star Wars AR & 360",
+      "role": "Senior Digital Producer · 2015 — 2018",
+      "body": "Ideation and execution of digital products across the LEGO Star Wars franchise: The Last Jedi 360 experience, the voice-activated Battle Run, LEGO AR Playgrounds, and the LEGO.com franchise sites.",
+      "media": [
+        "images/legosw/LEGO_3_1280px.jpg",
+        "images/legosw/LEGO_4_1280px.jpg",
+        "images/legosw/LEGO_5_1280px.jpg",
+        "images/legosw/LEGO_6_1280px.jpg",
+        "images/legosw/LEGO_7_1280px.jpg",
+        "images/legosw/LEGO_8_1280px.jpg",
+        "images/legosw/LEGO_13_1280px.jpg"
+      ],
+      "links": [
+        {
+          "label": "Battle Run",
+          "href": "https://www.youtube.com/watch?v=IMMIi1u2HjI"
+        },
+        {
+          "label": "360 experience",
+          "href": "https://www.youtube.com/shorts/mj7Leyaq780"
+        },
+        {
+          "label": "AR Playgrounds",
+          "href": "https://apps.apple.com/us/app/lego-hidden-side/id1450381018"
+        }
+      ],
+      "iconId": "logo-lego",
+      "mark": "LG",
+      "brand": "#D19A16",
+      "shotCount": 3
+    },
+    {
+      "key": "espntc",
+      "org": "ESPN",
+      "title": "Tournament Challenge",
+      "role": "Director of Product Management · 2007 — 2015",
+      "body": "The #1 NCAA tournament bracket game, available on web, mobile web, iPhone, iPad, and Android. Continued growth from 2008 to 2014, ultimately exceeding 10 million brackets. Led development of the iOS and Android apps from 2011 to 2014.",
+      "media": [
+        "images/espntc/ESPN_1_1280px.webp",
+        "images/espntc/ESPN_2_1280px.webp",
+        "images/espntc/ESPN_3_1280px.webp"
+      ],
+      "links": [
+        {
+          "label": "App Store",
+          "href": "https://apps.apple.com/us/app/espn-tournament-challenge/id359891723"
+        },
+        {
+          "label": "“Choose Wisely”",
+          "href": "https://youtu.be/znsbKpUrsXo"
+        }
+      ],
+      "iconId": "logo-espn",
+      "mark": "ES",
+      "brand": "#A81D2E",
+      "shotCount": 3
+    },
+    {
+      "key": "espnstreak",
+      "org": "ESPN",
+      "title": "Streak for the Cash and Fantasy Engines",
+      "role": "Director of Product Management · 2008 — 2015",
+      "body": "Led development of Streak for the Cash from 2008 to 2015, amassing 6.4 million users across web, mobile web, standalone apps, and the ESPN Fantasy app. Part of a portfolio of gaming engines spanning Bracket, Pick’em, Roster, Rank’em, and Trivia.",
+      "media": [
+        "images/espnstreak/ESPN_4_1280px.webp",
+        "images/espnstreak/ESPN_5_1280px.webp",
+        "images/espnstreak/ESPN_6_1280px.webp",
+        "images/espnstreak/ESPN_7_1280px.webp"
+      ],
+      "links": [
+        {
+          "label": "espn.com/fantasy",
+          "href": "https://www.espn.com/fantasy/"
+        },
+        {
+          "label": "“What Would Flo Do?”",
+          "href": "https://youtu.be/2h1F1mT6FjY"
+        }
+      ],
+      "iconId": "logo-espn",
+      "mark": "ES",
+      "brand": "#A81D2E",
+      "shotCount": 3
+    },
+    {
+      "key": "trav",
+      "org": "Travelers",
+      "title": "MyTravelers",
+      "role": "eBusiness Director of Product · 2018 — 2020",
+      "body": "Responsible for the MyTravelers.com self-service platform across Personal and Business Insurance, with both business and technical accountability. Managed two scrum teams and participated in portfolio planning to shape platform strategy and roadmap.",
+      "media": [
+        "images/trav/TRV_1_1280px.jpg",
+        "images/trav/TRV_2_1280px.jpg"
+      ],
+      "links": [
+        {
+          "label": "App Store",
+          "href": "https://apps.apple.com/us/app/travelers-mobile/id354604876"
+        },
+        {
+          "label": "Google Play",
+          "href": "https://play.google.com/store/apps/details?id=com.travelers.digitalservice"
+        }
+      ],
+      "iconId": "logo-trav",
+      "mark": "TR",
+      "brand": "#B01F32",
+      "shotCount": 3
+    },
+    {
+      "key": "esi",
+      "org": "Express Scripts / Cigna",
+      "title": "Express Scripts",
+      "role": "Agile Product Director · 2020 — 2021",
+      "body": "Managed the business product owners behind the Express-Scripts.com customer portal, setting self-service strategy focused on patient capability, reducing customer care call volume, and driving margin opportunities.",
+      "media": [
+        "images/esi/EXP_1280px.jpg"
+      ],
+      "links": [
+        {
+          "label": "express-scripts.com",
+          "href": "https://www.express-scripts.com"
+        }
+      ],
+      "iconId": "logo-esi",
+      "mark": "ES",
+      "brand": "#0F5A9E",
+      "shotCount": 3
+    },
+    {
+      "key": "sona",
+      "org": "Sonalysts",
+      "title": "Dangerous Waters & Fleet Command",
+      "role": "Senior Game Producer / Lead Designer · 1998 — 2007",
+      "body": "Managed the design, development, and publishing of Dangerous Waters, and contributed to Sub Command and Jane’s Fleet Command for Electronic Arts. Established publishing agreements with Strategy First and Steam.",
+      "media": [
+        "images/sona/SCS_1_1280px.webp",
+        "images/sona/SCS_2_1280px.webp",
+        "images/sona/SCS_3_1280px.webp"
+      ],
+      "links": [
+        {
+          "label": "Steam",
+          "href": "https://store.steampowered.com/search/?developer=Sonalysts"
+        },
+        {
+          "label": "Metacritic",
+          "href": "https://www.metacritic.com/company/sonalysts"
+        }
+      ],
+      "iconId": "logo-sona",
+      "mark": "SO",
+      "brand": "#2E4A5C",
+      "shotCount": 3
+    }
+  ],
+  "roles": [
+    {
+      "dates": "11/2022 — Present",
+      "company": "FOX Sports",
+      "title": "Director of Product Management",
+      "place": "West Hartford, CT",
+      "note": "Product lead for FOXSports.com and Super 6. Manage the PMs behind feature development and SEO content strategy; collaborate on digital strategy with executive leadership.",
+      "iconId": "logo-fox",
+      "mark": "FOX",
+      "brand": "#0B2C6B"
+    },
+    {
+      "dates": "05/2021 — 11/2022",
+      "company": "GameChanger",
+      "title": "Director of Product Management",
+      "place": "West Hartford, CT",
+      "note": "Product lead for the acquisition and growth team. Owned roadmap and quarterly OKRs; released Organizations and head-to-head scorekeeping.",
+      "iconId": "logo-gc",
+      "mark": "GC",
+      "brand": "#C24A28"
+    },
+    {
+      "dates": "08/2020 — 05/2021",
+      "company": "Express Scripts / Cigna",
+      "title": "Agile Product Director",
+      "place": "West Hartford, CT",
+      "note": "Managed business product owners for the Express-Scripts.com customer portal and drove quarterly portfolio planning and prioritization.",
+      "iconId": "logo-esi",
+      "mark": "ES",
+      "brand": "#0F5A9E"
+    },
+    {
+      "dates": "04/2018 — 08/2020",
+      "company": "Travelers",
+      "title": "eBusiness Director of Product (SAFe PM)",
+      "place": "Hartford, CT",
+      "note": "Owned MyTravelers.com development across Personal and Business Insurance; managed two scrum teams and participated in portfolio planning.",
+      "iconId": "logo-trav",
+      "mark": "TR",
+      "brand": "#B01F32"
+    },
+    {
+      "dates": "10/2015 — 04/2018",
+      "company": "LEGO Systems Inc.",
+      "title": "Senior Digital Producer (SAFe PM)",
+      "place": "Enfield, CT",
+      "note": "Ideation and execution of digital products across LEGO Superheroes, Batman Movie, and Star Wars on LEGO.com, iOS, and Android. Partnered with LEGO Global Marketing in Denmark.",
+      "iconId": "logo-lego",
+      "mark": "LG",
+      "brand": "#D19A16"
+    },
+    {
+      "dates": "01/2015 — 10/2015",
+      "company": "ESPN Inc.",
+      "title": "Director, Consumer Technology Operations",
+      "place": "Bristol, CT",
+      "note": "Created and led a team of 10 developers supporting all digital properties built by ESPN Consumer Software Engineering.",
+      "iconId": "logo-espn",
+      "mark": "ES",
+      "brand": "#A81D2E"
+    },
+    {
+      "dates": "07/2013 — 01/2015",
+      "company": "ESPN Inc.",
+      "title": "Director of Product Management, Fantasy Games",
+      "place": "Bristol, CT",
+      "note": "Managed all phases of product development and owned strategy and roadmaps. Used Omniture, Localytics, comScore, and A/B testing to drive decisions.",
+      "iconId": "logo-espn",
+      "mark": "ES",
+      "brand": "#A81D2E"
+    },
+    {
+      "dates": "12/2010 — 07/2013",
+      "company": "ESPN Inc.",
+      "title": "Director of Product Development, Fantasy Games",
+      "place": "Bristol, CT",
+      "note": "Led developers and designers across the Bracket, Pick’em, Roster, Streak, Rank’em, and Trivia engines. Contributed to a record $41M in digital sponsorship revenue in FY 2012.",
+      "iconId": "logo-espn",
+      "mark": "ES",
+      "brand": "#A81D2E"
+    },
+    {
+      "dates": "02/2007 — 12/2010",
+      "company": "ESPN Inc.",
+      "title": "Product Manager and Developer, Fantasy Games",
+      "place": "Bristol, CT",
+      "note": "Development and maintenance of all Fantasy Minigame products on ESPN.com and the iOS/Android app stores.",
+      "iconId": "logo-espn",
+      "mark": "ES",
+      "brand": "#A81D2E"
+    },
+    {
+      "dates": "02/2003 — 02/2007",
+      "company": "Sonalysts Inc.",
+      "title": "Senior Game Producer / Lead Designer",
+      "place": "Waterford, CT",
+      "note": "Managed design, development, and publishing of Dangerous Waters; negotiated retail and digital distribution with Strategy First and Steam.",
+      "iconId": "logo-sona",
+      "mark": "SO",
+      "brand": "#2E4A5C"
+    },
+    {
+      "dates": "07/2002 — 01/2003",
+      "company": "VTech Inc.",
+      "title": "Interactive Designer / Associate Producer",
+      "place": "Norwalk, CT",
+      "note": "Drove design, prototyping, and development of three older-age product lines and created a development process for a line of toys and expansion cartridges.",
+      "iconId": "logo-vtech",
+      "mark": "VT",
+      "brand": "#5B3E8E"
+    },
+    {
+      "dates": "05/1998 — 07/2002",
+      "company": "Sonalysts Inc.",
+      "title": "Lead Game Designer / Game Developer",
+      "place": "Waterford, CT",
+      "note": "Drove design and development of Sub Command, and contributed to Jane’s Fleet Command and Jane’s 688(i) Hunter/Killer for Electronic Arts.",
+      "iconId": "logo-sona",
+      "mark": "SO",
+      "brand": "#2E4A5C"
+    }
+  ]
+}

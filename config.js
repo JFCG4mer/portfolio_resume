@@ -1,106 +1,49 @@
 /**
- * Site configuration — edit this file, reload the page. No other code changes needed.
+ * Content loader.
  *
- * MEDIA (carousels)
- *   Put your files anywhere in the repo (an `images/` folder is the obvious home) and list the
- *   paths here, in the order you want them shown. Paths are relative to this file.
- *   Supported: .jpg .jpeg .png .gif .webp .avif  and video .webm .mp4
- *   To replace an image, overwrite the file in your repo — no change here.
- *   To reorder, move the line. To remove, delete the line.
- *   A project with no entries shows a note instead of a carousel.
+ * All site content now lives in content/site.json, which is what the CMS at
+ * /admin reads and writes. This file just fetches it and hands it to the page.
  *
- * LOGOS
- *   Path to each company logo. Leave "" to fall back to the colored monogram chip.
- *
- * Project keys: fox, gc, lego, legosw, espntc, espnstreak, trav, esi, sona
+ * You can still edit content/site.json by hand — it is plain JSON. Just note
+ * that JSON is stricter than JavaScript: double quotes only, and no trailing
+ * comma after the last item in a list or object.
  */
-window.SITE_CONFIG = {
-  nav: [
-    { label: 'Work', href: '#work' },
-    { label: 'Experience', href: '#experience' },
-    { label: 'Résumé', href: '#resume' },
-    { label: 'Contact', href: '#contact' }
-  ],
+(function () {
+  var REVEAL_TIMEOUT = 2500;
+  var root = document.documentElement;
+  var revealed = false;
 
-  links: {
-    resume: 'https://drive.google.com/file/d/1u9_no07YNnlS9O1cdkO1dfUU6ZrArpSP/view',
-    portfolioPdf: 'https://docs.google.com/presentation/d/1uvMGs3uRrxjWqZL_B7b4cvCB9djvstx91inFUwFNdYI/edit',
-    linkedin: 'https://www.linkedin.com/in/jamie-carlson-b480341/',
-    email: ''
-  },
+  // Hide until content lands so the page doesn't flash an empty layout.
+  root.style.visibility = 'hidden';
 
-  labels: {
-    resume: 'Download résumé (PDF)',
-    portfolioPdf: 'View product portfolio',
-    linkedin: 'Connect on LinkedIn'
-  },
-
-  portrait: 'images/jamie-carlson.png',
-
-  media: {
-    fox: [
-      'images/fox/FOX_SPT_1280px.jpg',
-      'images/fox/FOX_SPT_S6_1280px.jpg'
-    ],
-    gc: [
-      'images/gc/GC_1280px.jpg'
-    ],
-    lego: [
-      'images/lego/LEGO_1_1280px.jpg',
-      'images/lego/LEGO_2_1280px.jpg',
-      'images/lego/LEGO_10_1280px.jpg',
-      'images/lego/LEGO_11_LEGO_9_1280px.jpg',
-      'images/lego/LEGO_11B_1280px.jpg',
-      'images/lego/LEGO_12_1280px.jpg'
-    ],
-    legosw: [
-      'images/legosw/LEGO_3_1280px.jpg',
-      'images/legosw/LEGO_4_1280px.jpg',
-      'images/legosw/LEGO_5_1280px.jpg',
-      'images/legosw/LEGO_6_1280px.jpg',
-      'images/legosw/LEGO_7_1280px.jpg',
-      'images/legosw/LEGO_8_1280px.jpg',
-      'images/legosw/LEGO_13_1280px.jpg'
-    ],
-    espntc: [
-      'images/espntc/ESPN_1_1280px.webp',
-      'images/espntc/ESPN_2_1280px.webp',
-      'images/espntc/ESPN_3_1280px.webp'
-    ],
-    espnstreak: [
-      'images/espnstreak/ESPN_4_1280px.webp',
-      'images/espnstreak/ESPN_5_1280px.webp',
-      'images/espnstreak/ESPN_6_1280px.webp',
-      'images/espnstreak/ESPN_7_1280px.webp'
-    ],
-    trav: [
-      'images/trav/TRV_1_1280px.jpg',
-      'images/trav/TRV_2_1280px.jpg'
-    ],
-    esi: [
-      'images/esi/EXP_1280px.jpg'
-    ],
-    sona: [
-      'images/sona/SCS_1_1280px.webp',
-      'images/sona/SCS_2_1280px.webp',
-      'images/sona/SCS_3_1280px.webp'
-    ]
-  },
-
-  logos: {
-    fox: 'images/logos/fox.webp',
-    gc: 'images/logos/gc.webp',
-    esi: 'images/logos/esi.webp',
-    trav: 'images/logos/trav.webp',
-    lego: 'images/logos/lego.webp',
-    espn: 'images/logos/espn.webp',
-    sona: 'images/logos/sona.webp',
-    vtech: 'images/logos/vtech.webp'
-  },
-
-  projectLinks: {
-    // fox: [
-    //   { label: 'foxsports.com', href: 'https://www.foxsports.com' }
-    // ]
+  function reveal() {
+    if (revealed) return;
+    revealed = true;
+    root.style.visibility = '';
   }
-};
+
+  // Safety net: if anything goes wrong, show the page regardless.
+  setTimeout(reveal, REVEAL_TIMEOUT);
+
+  window.SITE_CONFIG_READY = fetch('content/site.json', { cache: 'no-cache' })
+    .then(function (r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
+    .then(function (data) {
+      window.SITE_CONFIG = data;
+      // Rebuild the legacy media map so older code paths keep working.
+      window.SITE_CONFIG.media = (data.projects || []).reduce(function (acc, p) {
+        acc[p.key] = p.media || [];
+        return acc;
+      }, {});
+      setTimeout(reveal, 60);
+      return data;
+    })
+    .catch(function (err) {
+      console.error('Could not load content/site.json —', err.message);
+      window.SITE_CONFIG = window.SITE_CONFIG || {};
+      reveal();
+      return window.SITE_CONFIG;
+    });
+})();

@@ -1,0 +1,103 @@
+backend:
+  name: github
+  repo: JFCG4mer/portfolio_resume
+  branch: main
+
+media_folder: images
+public_folder: images
+
+collections:
+  - name: site
+    label: Site
+    files:
+      # ---------------------------------------------------------------
+      - name: basics
+        label: Links & basics
+        file: content/site.json
+        description: Résumé link, LinkedIn, email, portrait, and nav.
+        fields:
+          - { name: portrait, label: Portrait photo, widget: image, required: false }
+
+          - name: links
+            label: Links
+            widget: object
+            fields:
+              - { name: resume, label: Résumé URL, widget: string, required: false }
+              - { name: portfolioPdf, label: Portfolio deck URL, widget: string, required: false }
+              - { name: linkedin, label: LinkedIn URL, widget: string, required: false }
+              - { name: email, label: Email address, widget: string, required: false, hint: "Leave blank to hide the email button." }
+
+          - name: labels
+            label: Button labels
+            widget: object
+            collapsed: true
+            fields:
+              - { name: resume, label: Résumé button, widget: string, required: false }
+              - { name: portfolioPdf, label: Portfolio button, widget: string, required: false }
+              - { name: linkedin, label: LinkedIn button, widget: string, required: false }
+
+          - name: nav
+            label: Navigation
+            widget: list
+            collapsed: true
+            summary: "{{fields.label}}"
+            fields:
+              - { name: label, label: Label, widget: string }
+              - { name: href, label: Target, widget: string, hint: "Anchor like #work, or a full URL." }
+
+          # Preserved so saving this file doesn't drop the rest.
+          - { name: logos, label: Logos, widget: object, collapsed: true, required: false, fields: [
+              { name: fox, widget: image, required: false },
+              { name: gc, widget: image, required: false },
+              { name: esi, widget: image, required: false },
+              { name: trav, widget: image, required: false },
+              { name: lego, widget: image, required: false },
+              { name: espn, widget: image, required: false },
+              { name: sona, widget: image, required: false },
+              { name: vtech, widget: image, required: false }
+            ] }
+
+          - name: projects
+            label: Projects
+            widget: list
+            collapsed: true
+            summary: "{{fields.org}} — {{fields.title}}"
+            fields:
+              - { name: key, label: Key, widget: string, hint: "Internal id. Don't change this." }
+              - { name: org, label: Company, widget: string }
+              - { name: title, label: Project title, widget: string }
+              - { name: role, label: Role line, widget: string }
+              - { name: body, label: Description, widget: text }
+              - name: media
+                label: Images
+                widget: list
+                field: { name: src, label: File, widget: image }
+                hint: "Drag to reorder. First image is the one shown on the card."
+              - name: links
+                label: Links
+                widget: list
+                collapsed: true
+                summary: "{{fields.label}}"
+                required: false
+                fields:
+                  - { name: label, label: Label, widget: string }
+                  - { name: href, label: URL, widget: string }
+              - { name: iconId, label: Logo id, widget: string, collapsed: true }
+              - { name: mark, label: Monogram, widget: string }
+              - { name: brand, label: Brand colour, widget: color, required: false }
+              - { name: shotCount, label: Placeholder count, widget: number, required: false, value_type: int }
+
+          - name: roles
+            label: Experience
+            widget: list
+            collapsed: true
+            summary: "{{fields.company}} — {{fields.title}}"
+            fields:
+              - { name: dates, label: Dates, widget: string, hint: "e.g. 11/2022 — Present" }
+              - { name: company, label: Company, widget: string }
+              - { name: title, label: Job title, widget: string }
+              - { name: place, label: Location, widget: string }
+              - { name: note, label: Summary, widget: text }
+              - { name: iconId, label: Logo id, widget: string, collapsed: true }
+              - { name: mark, label: Monogram, widget: string }
+              - { name: brand, label: Brand colour, widget: color, required: false }
