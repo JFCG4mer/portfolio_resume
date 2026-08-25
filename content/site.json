@@ -81,7 +81,7 @@
       "key": "fox",
       "org": "FOX Sports",
       "title": "FOXSports.com & Super 6",
-      "role": "Director of Product Management · 2022 — Present",
+      "role": "Director of Product Management · 2022 - Present",
       "body": "Product lead for the FOXSports.com and Super 6 interactive teams. Manage the product managers responsible for feature development and SEO content strategy, working across business development, PMO, marketing, design, tech, and QA. Collaborate on digital strategy with the executive leadership team and mentor product owners through shifting priorities.",
       "media": [
         "images/fox/FOX_SPT_1280px.jpg",
@@ -113,8 +113,8 @@
     {
       "key": "gc",
       "org": "GameChanger",
-      "title": "Acquisition & Organizations",
-      "role": "Director of Product Management · 2021 — 2022",
+      "title": "GameChanger - User Acquisition & Organizations",
+      "role": "Director of Product Management · 2021 - 2022",
       "body": "Led the acquisition and growth team onboarding coaches and league admins onto the platform, and drove the release of a new Organizations capability used by leagues, travel team organizations, and tournaments. Released head-to-head scorekeeping that synchronizes scoring data across both participating teams.",
       "media": [
         "images/gc/GC_1280px.jpg"
@@ -142,7 +142,7 @@
       "key": "lego",
       "org": "The LEGO Group",
       "title": "LEGO Batman Movie app",
-      "role": "Senior Digital Producer · 2015 — 2018",
+      "role": "Senior Digital Producer · 2015 - 2018",
       "body": "Led development of the LEGO Batman Movie iOS and Android apps with Warner Brothers. Launched globally on January 10, 2017 and reached 2.3 million downloads in the first thirty days.",
       "media": [
         "images/lego/LEGO_1_1280px.jpg",
@@ -175,7 +175,7 @@
       "key": "legosw",
       "org": "The LEGO Group",
       "title": "LEGO Star Wars AR & 360",
-      "role": "Senior Digital Producer · 2015 — 2018",
+      "role": "Senior Digital Producer · 2015 - 2018",
       "body": "Ideation and execution of digital products across the LEGO Star Wars franchise: The Last Jedi 360 experience, the voice-activated Battle Run, LEGO AR Playgrounds, and the LEGO.com franchise sites.",
       "media": [
         "images/legosw/LEGO_3_1280px.jpg",
@@ -209,7 +209,7 @@
       "key": "espntc",
       "org": "ESPN",
       "title": "Tournament Challenge",
-      "role": "Director of Product Management · 2007 — 2015",
+      "role": "Director of Product Management · 2007 - 2015",
       "body": "The #1 NCAA tournament bracket game, available on web, mobile web, iPhone, iPad, and Android. Continued growth from 2008 to 2014, ultimately exceeding 10 million brackets. Led development of the iOS and Android apps from 2011 to 2014.",
       "media": [
         "images/espntc/ESPN_1_1280px.webp",
@@ -235,7 +235,7 @@
       "key": "espnstreak",
       "org": "ESPN",
       "title": "Streak for the Cash and Fantasy Engines",
-      "role": "Director of Product Management · 2008 — 2015",
+      "role": "Director of Product Management · 2008 - 2015",
       "body": "Led development of Streak for the Cash from 2008 to 2015, amassing 6.4 million users across web, mobile web, standalone apps, and the ESPN Fantasy app. Part of a portfolio of gaming engines spanning Bracket, Pick’em, Roster, Rank’em, and Trivia.",
       "media": [
         "images/espnstreak/ESPN_4_1280px.webp",
@@ -262,7 +262,7 @@
       "key": "trav",
       "org": "Travelers",
       "title": "MyTravelers",
-      "role": "eBusiness Director of Product · 2018 — 2020",
+      "role": "eBusiness Director of Product · 2018 - 2020",
       "body": "Responsible for the MyTravelers.com self-service platform across Personal and Business Insurance, with both business and technical accountability. Managed two scrum teams and participated in portfolio planning to shape platform strategy and roadmap.",
       "media": [
         "images/trav/TRV_1_1280px.jpg",
@@ -287,7 +287,7 @@
       "key": "esi",
       "org": "Express Scripts / Cigna",
       "title": "Express Scripts",
-      "role": "Agile Product Director · 2020 — 2021",
+      "role": "Agile Product Director · 2020 - 2021",
       "body": "Managed the business product owners behind the Express-Scripts.com customer portal, setting self-service strategy focused on patient capability, reducing customer care call volume, and driving margin opportunities.",
       "media": [
         "images/esi/EXP_1280px.jpg"
@@ -332,7 +332,7 @@
   ],
   "roles": [
     {
-      "dates": "11/2022 — Present",
+      "dates": "11/2022 - Present",
       "company": "FOX Sports",
       "title": "Director of Product Management",
       "place": "West Hartford, CT",
@@ -342,7 +342,7 @@
       "brand": "#0B2C6B"
     },
     {
-      "dates": "05/2021 — 11/2022",
+      "dates": "05/2021 - 11/2022",
       "company": "GameChanger",
       "title": "Director of Product Management",
       "place": "West Hartford, CT",
@@ -352,7 +352,7 @@
       "brand": "#C24A28"
     },
     {
-      "dates": "08/2020 — 05/2021",
+      "dates": "08/2020 - 05/2021",
       "company": "Express Scripts / Cigna",
       "title": "Agile Product Director",
       "place": "West Hartford, CT",
@@ -362,7 +362,7 @@
       "brand": "#0F5A9E"
     },
     {
-      "dates": "04/2018 — 08/2020",
+      "dates": "04/2018 - 08/2020",
       "company": "Travelers",
       "title": "eBusiness Director of Product (SAFe PM)",
       "place": "Hartford, CT",
@@ -372,7 +372,7 @@
       "brand": "#B01F32"
     },
     {
-      "dates": "10/2015 — 04/2018",
+      "dates": "10/2015 - 04/2018",
       "company": "LEGO Systems Inc.",
       "title": "Senior Digital Producer (SAFe PM)",
       "place": "Enfield, CT",
@@ -382,7 +382,7 @@
       "brand": "#D19A16"
     },
     {
-      "dates": "01/2015 — 10/2015",
+      "dates": "01/2015 - 10/2015",
       "company": "ESPN Inc.",
       "title": "Director, Consumer Technology Operations",
       "place": "Bristol, CT",
@@ -392,7 +392,7 @@
       "brand": "#A81D2E"
     },
     {
-      "dates": "07/2013 — 01/2015",
+      "dates": "07/2013 - 01/2015",
       "company": "ESPN Inc.",
       "title": "Director of Product Management, Fantasy Games",
       "place": "Bristol, CT",
@@ -402,7 +402,7 @@
       "brand": "#A81D2E"
     },
     {
-      "dates": "12/2010 — 07/2013",
+      "dates": "12/2010 - 07/2013",
       "company": "ESPN Inc.",
       "title": "Director of Product Development, Fantasy Games",
       "place": "Bristol, CT",
@@ -412,7 +412,7 @@
       "brand": "#A81D2E"
     },
     {
-      "dates": "02/2007 — 12/2010",
+      "dates": "02/2007 - 12/2010",
       "company": "ESPN Inc.",
       "title": "Product Manager and Developer, Fantasy Games",
       "place": "Bristol, CT",
@@ -422,7 +422,7 @@
       "brand": "#A81D2E"
     },
     {
-      "dates": "02/2003 — 02/2007",
+      "dates": "02/2003 - 02/2007",
       "company": "Sonalysts Inc.",
       "title": "Senior Game Producer / Lead Designer",
       "place": "Waterford, CT",
@@ -432,7 +432,7 @@
       "brand": "#2E4A5C"
     },
     {
-      "dates": "07/2002 — 01/2003",
+      "dates": "07/2002 - 01/2003",
       "company": "VTech Inc.",
       "title": "Interactive Designer / Associate Producer",
       "place": "Norwalk, CT",
@@ -442,7 +442,7 @@
       "brand": "#5B3E8E"
     },
     {
-      "dates": "05/1998 — 07/2002",
+      "dates": "05/1998 - 07/2002",
       "company": "Sonalysts Inc.",
       "title": "Lead Game Designer / Game Developer",
       "place": "Waterford, CT",
