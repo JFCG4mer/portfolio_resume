@@ -12,6 +12,11 @@
 # and set status = 200 so it serves from your own domain.
 # ---------------------------------------------------------------------------
 [[redirects]]
+  from = "/side-projects"
+  to = "/side-projects.html"
+  status = 200
+
+[[redirects]]
   from = "/resume"
   to = "/resume/Jamie-Carlson-Resume.pdf"
   status = 200

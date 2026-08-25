@@ -1,0 +1,142 @@
+{
+  "hero": {
+    "eyebrow": "Side Projects · Built and Maintained",
+    "headline": "For the love of the game",
+    "intro": "There's never been a better time to explore ideas, tap into your creativity, and see a project through to completion. Below are some projects that I am passionate about and am also proud to have created on my own from start to finish.",
+    "cta": "See the projects"
+  },
+  "sections": {
+    "workHeading": "Side projects",
+    "workMeta": "Personal · Ongoing",
+    "copyright": "© 2026 Jamie Carlson"
+  },
+  "projects": [
+    {
+      "key": "pyr",
+      "org": "Pyramiddle",
+      "title": "Pyramiddle — Daily Word Game",
+      "role": "Solo designer, developer, and publisher · 2025 - Present",
+      "body": "A free daily word puzzle where twenty-one letter tiles are arranged across five rows of a pyramid, every row forming a valid word and longer rows earning bigger multipliers. Everyone worldwide gets the same tiles each day. Beyond the daily puzzle there are three additional modes, including Desert Journey — a fifty-five puzzle riddle campaign across five stages of ancient Egypt. Shipped on iOS and Android.",
+      "media": [
+        "/images/PYR_Main_Menu_July-2026_9x16.png",
+        "/images/PYR_Puzzle_9x16.png",
+        "/images/PYR_Campaign_9x16.png",
+        "/images/PYR_Perfect_9x16.jpg"
+      ],
+      "links": [
+        {
+          "label": "pyramiddlegame.com",
+          "href": "https://www.pyramiddlegame.com"
+        },
+        {
+          "label": "App Store",
+          "href": "https://apps.apple.com/us/app/pyramiddle/id6758254960"
+        },
+        {
+          "label": "Google Play",
+          "href": "https://play.google.com/store/apps/details?id=com.jfcg4mes.pyramiddle"
+        }
+      ],
+      "iconId": "logo-pyr",
+      "mark": "PY",
+      "brand": "#D4A34A",
+      "shotCount": 2
+    },
+    {
+      "key": "wmga",
+      "org": "Wintonbury Men's Golf Association",
+      "title": "WMGA — League Site",
+      "role": "Site owner and maintainer · 2021 — Present",
+      "body": "The public home for a men's golf association at Wintonbury Hills in Bloomfield, Connecticut. Handles season registration, weekly event schedules, points and ringer standings, local rules, club championship brackets, and the Bill Starkie Award history. Integrates with Golf Genius for live scoring and keeps five-plus seasons of results archived and navigable.",
+      "media": [
+        "/images/GOLFWMGA_1.jpg",
+        "/images/GOLFWMGA_2.jpg"
+      ],
+      "links": [
+        {
+          "label": "golfwmga.com",
+          "href": "https://www.golfwmga.com"
+        },
+        {
+          "label": "Instagram",
+          "href": "https://www.instagram.com/golfwmga/"
+        }
+      ],
+      "iconId": "logo-wmga",
+      "mark": "WM",
+      "brand": "#1E4A2A",
+      "shotCount": 2
+    },
+    {
+      "key": "fohf",
+      "org": "Friends of Hall Football",
+      "title": "Friends of Hall Football",
+      "role": "Designer and developer · 2026 — Present",
+      "body": "Site for the 501(c)(3) booster club supporting William H. Hall High School football in West Hartford. Built around the things families actually need: the full varsity schedule with venues, rosters, sponsor recognition, volunteer sign-ups, the quarterly newsletter, and donation and team store links. Schedule data reconciles against the official CIAC listing.",
+      "media": [
+        "/images/FOHF_1_FRONT.jpg",
+        "/images/FOHF_2_SPONSOR_FORM.jpg",
+        "/images/FOHF_3_DONATE_STRIPE.jpg",
+        "/images/FOHF_4_STORE.jpg"
+      ],
+      "links": [
+        {
+          "label": "friendsofhallfootball.org",
+          "href": "https://www.friendsofhallfootball.org"
+        },
+        {
+          "label": "Newsletter",
+          "href": "https://friendsofhallfootball.org/newsletter"
+        },
+        {
+          "label": "Donate",
+          "href": "https://friendsofhallfootball.org/donate"
+        }
+      ],
+      "iconId": "logo-fohf",
+      "mark": "FH",
+      "brand": "#0B2042",
+      "shotCount": 2
+    }
+  ],
+  "portrait": "/images/JC_LINK_LEGO.jpeg",
+  "links": {
+    "resume": "/resume/Jamie-Carlson-Resume.pdf",
+    "portfolioPdf": "/resume/Jamie-Carlson-Product-Portfolio.pdf",
+    "linkedin": "https://www.linkedin.com/in/jamie-carlson-b480341/",
+    "email": "jamiecarlson@gmail.com"
+  },
+  "labels": {
+    "resume": "Download Resume (PDF)",
+    "portfolioPdf": "Download Product Portfolio (PDF)",
+    "linkedin": "Connect on LinkedIn"
+  },
+  "nav": [
+    {
+      "label": "Work",
+      "href": "/#work"
+    },
+    {
+      "label": "Experience",
+      "href": "/#experience"
+    },
+    {
+      "label": "Resume",
+      "href": "/#resume"
+    },
+    {
+      "label": "Side Projects",
+      "href": "/side-projects"
+    },
+    {
+      "label": "Contact",
+      "href": "/#contact"
+    }
+  ],
+  "logos": {
+    "pyr": "/images/icon.svg",
+    "wmga": "/images/WBH_logo2.png",
+    "fohf": "/images/TITANS_800x800_blue.png"
+  },
+  "roles": []
+}

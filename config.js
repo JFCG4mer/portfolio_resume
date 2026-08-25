@@ -25,7 +25,7 @@
   // Safety net: if anything goes wrong, show the page regardless.
   setTimeout(reveal, REVEAL_TIMEOUT);
 
-  window.SITE_CONFIG_READY = fetch('content/site.json', { cache: 'no-cache' })
+  window.SITE_CONFIG_READY = fetch(window.SITE_CONTENT_URL || 'content/site.json', { cache: 'no-cache' })
     .then(function (r) {
       if (!r.ok) throw new Error('HTTP ' + r.status);
       return r.json();

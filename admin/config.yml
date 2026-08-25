@@ -142,3 +142,80 @@ collections:
               - { name: iconId, label: Logo id, widget: string, collapsed: true }
               - { name: mark, label: Monogram, widget: string }
               - { name: brand, label: Brand colour, widget: color, required: false }
+
+      # ---------------------------------------------------------------
+      - name: side_projects
+        label: Side Projects page
+        file: content/side-projects.json
+        description: The /side-projects page — Pyramiddle, WMGA, Friends of Hall Football.
+        fields:
+          - name: hero
+            label: Page intro
+            widget: object
+            fields:
+              - { name: eyebrow, label: Eyebrow, widget: string }
+              - { name: headline, label: Headline, widget: text }
+              - { name: intro, label: Intro paragraph, widget: text }
+              - { name: cta, label: Button label, widget: string }
+
+          - name: sections
+            label: Headings
+            widget: object
+            collapsed: true
+            fields:
+              - { name: workHeading, label: Section heading, widget: string }
+              - { name: workMeta, label: Meta line, widget: string }
+              - { name: copyright, label: Footer copyright, widget: string }
+
+          - name: projects
+            label: Projects
+            widget: list
+            summary: "{{fields.org}} — {{fields.title}}"
+            fields:
+              - { name: key, label: Key, widget: string, hint: "Internal id. Must match a logo id below." }
+              - { name: org, label: Name, widget: string }
+              - { name: title, label: Title, widget: string }
+              - { name: role, label: Role line, widget: string }
+              - { name: body, label: Description, widget: text }
+              - name: media
+                label: Images
+                widget: list
+                field: { name: src, label: File, widget: image }
+                hint: "Replace the placeholders with real screenshots when you have them."
+              - name: links
+                label: Links
+                widget: list
+                collapsed: true
+                summary: "{{fields.label}}"
+                fields:
+                  - { name: label, label: Label, widget: string }
+                  - { name: href, label: URL, widget: string }
+              - { name: iconId, label: Logo id, widget: string, collapsed: true }
+              - { name: mark, label: Monogram, widget: string }
+              - { name: brand, label: Brand colour, widget: color, required: false }
+              - { name: shotCount, label: Placeholder count, widget: number, required: false, value_type: int }
+
+          - { name: portrait, label: Portrait, widget: image, required: false }
+          - { name: links, label: Links, widget: object, collapsed: true, fields: [
+              { name: resume, widget: string, required: false },
+              { name: portfolioPdf, widget: string, required: false },
+              { name: linkedin, widget: string, required: false },
+              { name: email, widget: string, required: false } ] }
+          - { name: labels, label: Button labels, widget: object, collapsed: true, fields: [
+              { name: resume, widget: string, required: false },
+              { name: portfolioPdf, widget: string, required: false },
+              { name: linkedin, widget: string, required: false } ] }
+          - name: nav
+            label: Navigation
+            widget: list
+            collapsed: true
+            summary: "{{fields.label}}"
+            fields:
+              - { name: label, label: Label, widget: string }
+              - { name: href, label: Target, widget: string }
+          - { name: logos, label: Logos, widget: object, collapsed: true, fields: [
+              { name: pyr, widget: image, required: false },
+              { name: wmga, widget: image, required: false },
+              { name: fohf, widget: image, required: false } ] }
+          - { name: roles, label: Unused, widget: list, required: false, collapsed: true, fields: [
+              { name: company, widget: string, required: false } ] }
