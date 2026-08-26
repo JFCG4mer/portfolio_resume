@@ -40,6 +40,17 @@
   a { color: #1F4E46; text-decoration: none; }
   a:hover { color: #17181A; }
   ::selection { background: #1F4E46; color: #F5F2EC; }
+
+  /* Mobile nav: logo centered on its own line, links centered and balanced below. */
+  @media (max-width: 700px) {
+    nav[style*="sticky"] { justify-content: center; }
+    nav[style*="sticky"] > a:first-child { flex: 0 0 auto; }
+    [data-nav] {
+      width: 100%;
+      justify-content: center !important;
+      row-gap: 10px;
+    }
+  }
   @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
   @keyframes wordUp { from { opacity: 0; transform: translateY(0.5em) rotate(1.2deg); } to { opacity: 1; transform: none; } }
   @keyframes drift { 0% { transform: translate3d(0,0,0) scale(1); } 50% { transform: translate3d(3%, -4%, 0) scale(1.12); } 100% { transform: translate3d(0,0,0) scale(1); } }
@@ -51,13 +62,13 @@
 
 <div style="max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,40px)">
 
-  <nav style="position:sticky;top:0;z-index:40;display:flex;justify-content:space-between;align-items:center;gap:24px;margin:0 calc(-1 * clamp(20px,5vw,40px));padding:20px clamp(20px,5vw,40px);background:rgba(245,242,236,0.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(23,24,26,0.08)">
-    <a href="#top" style="display:inline-flex;align-items:center;gap:12px;font-family:Newsreader,serif;font-size:19px;letter-spacing:0.01em;color:#17181A"><span style="display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:#1F4E46;color:#F5F2EC;font-family:'IBM Plex Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.02em">JC</span>Jamie Carlson</a>
-    <div data-nav style="display:flex;gap:28px;align-items:center;font-size:13.5px;letter-spacing:0.04em;text-transform:uppercase">
-      <a href="#work" style="color:#6E6A61" style-hover="color:#17181A">Work</a>
-      <a href="#experience" style="color:#6E6A61" style-hover="color:#17181A">Experience</a>
-      <a href="#resume" style="color:#6E6A61" style-hover="color:#17181A">Resume</a>
-      <a href="#contact" style="color:#6E6A61" style-hover="color:#17181A">Contact</a>
+  <nav style="position:sticky;top:0;z-index:40;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px clamp(12px,3vw,24px);margin:0 calc(-1 * clamp(20px,5vw,40px));padding:20px clamp(20px,5vw,40px);background:rgba(245,242,236,0.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(23,24,26,0.08)">
+    <a href="#top" style="display:inline-flex;align-items:center;gap:12px;font-family:Newsreader,serif;font-size:clamp(16px,4vw,19px);letter-spacing:0.01em;color:#17181A;white-space:nowrap;flex:0 0 auto"><span style="display:inline-flex;align-items:center;justify-content:center;flex:0 0 30px;width:30px;height:30px;min-width:30px;aspect-ratio:1/1;border-radius:50%;background:#1F4E46;color:#F5F2EC;font-family:'IBM Plex Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.02em">JC</span>Jamie Carlson</a>
+    <div data-nav style="display:flex;flex-wrap:wrap;gap:8px clamp(14px,3.2vw,28px);align-items:center;justify-content:flex-end;font-size:clamp(12px,3vw,13.5px);letter-spacing:0.04em;text-transform:uppercase">
+      <a href="#work" style="color:#6E6A61;white-space:nowrap" style-hover="color:#17181A">Work</a>
+      <a href="#experience" style="color:#6E6A61;white-space:nowrap" style-hover="color:#17181A">Experience</a>
+      <a href="#resume" style="color:#6E6A61;white-space:nowrap" style-hover="color:#17181A">Resume</a>
+      <a href="#contact" style="color:#6E6A61;white-space:nowrap" style-hover="color:#17181A">Contact</a>
     </div>
   </nav>
 
@@ -314,7 +325,7 @@ class Component extends DCLogic {
           a.href = item.href;
           a.textContent = item.label;
           if (/^https?:/.test(item.href)) { a.target = '_blank'; a.rel = 'noopener'; }
-          a.style.cssText = 'color:#6E6A61;text-decoration:none';
+          a.style.cssText = 'color:#6E6A61;text-decoration:none;white-space:nowrap';
           a.addEventListener('mouseenter', () => { a.style.color = '#17181A'; });
           a.addEventListener('mouseleave', () => { a.style.color = '#6E6A61'; });
           nav.appendChild(a);

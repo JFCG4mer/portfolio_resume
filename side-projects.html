@@ -10,13 +10,13 @@
 <meta property="og:site_name" content="Jamie Carlson">
 <meta property="og:url" content="https://jamiecarlson.fyi/side-projects">
 <meta property="og:title" content="Side Projects — Jamie Carlson">
-<meta property="og:description" content="Twenty-five years building consumer products people come back to. FOX Sports, GameChanger, LEGO, ESPN, Travelers, Sonalysts.">
+<meta property="og:description" content="Side projects built and maintained by Jamie Carlson — Pyramiddle, the Wintonbury Men's Golf Association, and Friends of Hall Football.">
 <meta property="og:image" content="https://jamiecarlson.fyi/images/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Side Projects — Jamie Carlson">
-<meta name="twitter:description" content="Twenty-five years building consumer products people come back to.">
+<meta name="twitter:description" content="Side projects built and maintained by Jamie Carlson.">
 <meta name="twitter:image" content="https://jamiecarlson.fyi/images/og-image.jpg">
 <meta name="theme-color" content="#F5F2EC">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -41,6 +41,17 @@
   a { color: #1F4E46; text-decoration: none; }
   a:hover { color: #17181A; }
   ::selection { background: #1F4E46; color: #F5F2EC; }
+
+  /* Mobile nav: logo centered on its own line, links centered and balanced below. */
+  @media (max-width: 700px) {
+    nav[style*="sticky"] { justify-content: center; }
+    nav[style*="sticky"] > a:first-child { flex: 0 0 auto; }
+    [data-nav] {
+      width: 100%;
+      justify-content: center !important;
+      row-gap: 10px;
+    }
+  }
   @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
   @keyframes wordUp { from { opacity: 0; transform: translateY(0.5em) rotate(1.2deg); } to { opacity: 1; transform: none; } }
   @keyframes drift { 0% { transform: translate3d(0,0,0) scale(1); } 50% { transform: translate3d(3%, -4%, 0) scale(1.12); } 100% { transform: translate3d(0,0,0) scale(1); } }
@@ -52,13 +63,13 @@
 
 <div style="max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,40px)">
 
-  <nav style="position:sticky;top:0;z-index:40;display:flex;justify-content:space-between;align-items:center;gap:24px;margin:0 calc(-1 * clamp(20px,5vw,40px));padding:20px clamp(20px,5vw,40px);background:rgba(245,242,236,0.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(23,24,26,0.08)">
-    <a href="#top" style="display:inline-flex;align-items:center;gap:12px;font-family:Newsreader,serif;font-size:19px;letter-spacing:0.01em;color:#17181A"><span style="display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:#1F4E46;color:#F5F2EC;font-family:'IBM Plex Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.02em">JC</span>Jamie Carlson</a>
-    <div data-nav style="display:flex;gap:28px;align-items:center;font-size:13.5px;letter-spacing:0.04em;text-transform:uppercase">
-      <a href="/#work" style="color:#6E6A61" style-hover="color:#17181A">Work</a>
-      <a href="/#experience" style="color:#6E6A61" style-hover="color:#17181A">Experience</a>
-      <a href="/#resume" style="color:#6E6A61" style-hover="color:#17181A">Resume</a>
-      <a href="/#contact" style="color:#6E6A61" style-hover="color:#17181A">Contact</a>
+  <nav style="position:sticky;top:0;z-index:40;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px clamp(12px,3vw,24px);margin:0 calc(-1 * clamp(20px,5vw,40px));padding:20px clamp(20px,5vw,40px);background:rgba(245,242,236,0.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(23,24,26,0.08)">
+    <a href="#top" style="display:inline-flex;align-items:center;gap:12px;font-family:Newsreader,serif;font-size:clamp(16px,4vw,19px);letter-spacing:0.01em;color:#17181A;white-space:nowrap;flex:0 0 auto"><span style="display:inline-flex;align-items:center;justify-content:center;flex:0 0 30px;width:30px;height:30px;min-width:30px;aspect-ratio:1/1;border-radius:50%;background:#1F4E46;color:#F5F2EC;font-family:'IBM Plex Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.02em">JC</span>Jamie Carlson</a>
+    <div data-nav style="display:flex;flex-wrap:wrap;gap:8px clamp(14px,3.2vw,28px);align-items:center;justify-content:flex-end;font-size:clamp(12px,3vw,13.5px);letter-spacing:0.04em;text-transform:uppercase">
+      <a href="/#work" style="color:#6E6A61;white-space:nowrap" style-hover="color:#17181A">Work</a>
+      <a href="/#experience" style="color:#6E6A61;white-space:nowrap" style-hover="color:#17181A">Experience</a>
+      <a href="/#resume" style="color:#6E6A61;white-space:nowrap" style-hover="color:#17181A">Resume</a>
+      <a href="/#contact" style="color:#6E6A61;white-space:nowrap" style-hover="color:#17181A">Contact</a>
     </div>
   </nav>
 
@@ -78,35 +89,9 @@
     </div>
   </header>
 
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1px;background:rgba(23,24,26,0.12);border-top:1px solid rgba(23,24,26,0.12);border-bottom:1px solid rgba(23,24,26,0.12);margin-bottom:130px">
-    <div data-reveal="" style="background:rgba(31,78,70,0.045);padding:30px 24px">
-      <div data-count="25" data-suffix="" style="font-family:Newsreader,serif;font-size:38px;line-height:1;color:#1F4E46">25</div>
-      <div style="font-size:13px;color:#6E6A61;margin-top:10px">Years in digital media</div>
-    </div>
-    <div data-reveal="" style="background:rgba(31,78,70,0.045);padding:30px 24px">
-      <div data-count="6.4" data-decimals="1" data-suffix="M" style="font-family:Newsreader,serif;font-size:38px;line-height:1;color:#1F4E46">6.4M</div>
-      <div style="font-size:13px;color:#6E6A61;margin-top:10px">Streak for the Cash users</div>
-    </div>
-    <div data-reveal="" style="background:rgba(31,78,70,0.045);padding:30px 24px">
-      <div data-count="10" data-suffix="M+" style="font-family:Newsreader,serif;font-size:38px;line-height:1;color:#1F4E46">10M+</div>
-      <div style="font-size:13px;color:#6E6A61;margin-top:10px">Tournament Challenge brackets, 2014</div>
-    </div>
-    <div data-reveal="" style="background:rgba(31,78,70,0.045);padding:30px 24px">
-      <div data-count="2.3" data-decimals="1" data-suffix="M" style="font-family:Newsreader,serif;font-size:38px;line-height:1;color:#1F4E46">2.3M</div>
-      <div style="font-size:13px;color:#6E6A61;margin-top:10px">LEGO Batman Movie app downloads in 30 days</div>
-    </div>
-  </div>
+  
 
-  <div style="position:relative;margin:-90px calc(-1 * clamp(20px,5vw,40px)) 120px;padding:26px 0;border-top:1px solid rgba(23,24,26,0.1);border-bottom:1px solid rgba(23,24,26,0.1);overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)">
-    <div style="display:flex;width:max-content;animation:marquee 42s linear infinite">
-      <div style="display:flex;gap:56px;padding-right:56px;align-items:center;font-family:Newsreader,serif;font-size:26px;color:rgba(23,24,26,0.55);white-space:nowrap">
-        <span style="display:inline-flex;align-items:center;gap:14px"><span data-mirror="logo-fox" style="position:relative;display:inline-flex;width:36px;height:36px;border-radius:8px;overflow:hidden;background:#0B2C6B;background-size:cover;background-position:center;flex:none"><span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:600;letter-spacing:0.03em">FOX</span></span>FOX Sports</span><span style="display:inline-flex;align-items:center;gap:14px"><span data-mirror="logo-gc" style="position:relative;display:inline-flex;width:36px;height:36px;border-radius:8px;overflow:hidden;background:#C24A28;background-size:cover;background-position:center;flex:none"><span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:600;letter-spacing:0.03em">GC</span></span>GameChanger</span><span style="display:inline-flex;align-items:center;gap:14px"><span data-mirror="logo-esi" style="position:relative;display:inline-flex;width:36px;height:36px;border-radius:8px;overflow:hidden;background:#0F5A9E;background-size:cover;background-position:center;flex:none"><span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:600;letter-spacing:0.03em">ES</span></span>Express Scripts</span><span style="display:inline-flex;align-items:center;gap:14px"><span data-mirror="logo-trav" style="position:relative;display:inline-flex;width:36px;height:36px;border-radius:8px;overflow:hidden;background:#B01F32;background-size:cover;background-position:center;flex:none"><span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:600;letter-spacing:0.03em">TR</span></span>Travelers</span><span style="display:inline-flex;align-items:center;gap:14px"><span data-mirror="logo-lego" style="position:relative;display:inline-flex;width:36px;height:36px;border-radius:8px;overflow:hidden;background:#D19A16;background-size:cover;background-position:center;flex:none"><span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:600;letter-spacing:0.03em">LG</span></span>The LEGO Group</span><span style="display:inline-flex;align-items:center;gap:14px"><span data-mirror="logo-espn" style="position:relative;display:inline-flex;width:36px;height:36px;border-radius:8px;overflow:hidden;background:#A81D2E;background-size:cover;background-position:center;flex:none"><span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:600;letter-spacing:0.03em">ES</span></span>ESPN</span><span style="display:inline-flex;align-items:center;gap:14px"><span data-mirror="logo-sona" style="position:relative;display:inline-flex;width:36px;height:36px;border-radius:8px;overflow:hidden;background:#2E4A5C;background-size:cover;background-position:center;flex:none"><span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:600;letter-spacing:0.03em">SO</span></span>Sonalysts</span><span style="display:inline-flex;align-items:center;gap:14px"><span data-mirror="logo-vtech" style="position:relative;display:inline-flex;width:36px;height:36px;border-radius:8px;overflow:hidden;background:#5B3E8E;background-size:cover;background-position:center;flex:none"><span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:600;letter-spacing:0.03em">VT</span></span>VTech</span>
-      </div>
-      <div aria-hidden="true" style="display:flex;gap:56px;padding-right:56px;align-items:center;font-family:Newsreader,serif;font-size:26px;color:rgba(23,24,26,0.55);white-space:nowrap">
-        <span style="display:inline-flex;align-items:center;gap:14px"><span data-mirror="logo-fox" style="position:relative;display:inline-flex;width:36px;height:36px;border-radius:8px;overflow:hidden;background:#0B2C6B;background-size:cover;background-position:center;flex:none"><span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:600;letter-spacing:0.03em">FOX</span></span>FOX Sports</span><span style="display:inline-flex;align-items:center;gap:14px"><span data-mirror="logo-gc" style="position:relative;display:inline-flex;width:36px;height:36px;border-radius:8px;overflow:hidden;background:#C24A28;background-size:cover;background-position:center;flex:none"><span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:600;letter-spacing:0.03em">GC</span></span>GameChanger</span><span style="display:inline-flex;align-items:center;gap:14px"><span data-mirror="logo-esi" style="position:relative;display:inline-flex;width:36px;height:36px;border-radius:8px;overflow:hidden;background:#0F5A9E;background-size:cover;background-position:center;flex:none"><span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:600;letter-spacing:0.03em">ES</span></span>Express Scripts</span><span style="display:inline-flex;align-items:center;gap:14px"><span data-mirror="logo-trav" style="position:relative;display:inline-flex;width:36px;height:36px;border-radius:8px;overflow:hidden;background:#B01F32;background-size:cover;background-position:center;flex:none"><span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:600;letter-spacing:0.03em">TR</span></span>Travelers</span><span style="display:inline-flex;align-items:center;gap:14px"><span data-mirror="logo-lego" style="position:relative;display:inline-flex;width:36px;height:36px;border-radius:8px;overflow:hidden;background:#D19A16;background-size:cover;background-position:center;flex:none"><span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:600;letter-spacing:0.03em">LG</span></span>The LEGO Group</span><span style="display:inline-flex;align-items:center;gap:14px"><span data-mirror="logo-espn" style="position:relative;display:inline-flex;width:36px;height:36px;border-radius:8px;overflow:hidden;background:#A81D2E;background-size:cover;background-position:center;flex:none"><span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:600;letter-spacing:0.03em">ES</span></span>ESPN</span><span style="display:inline-flex;align-items:center;gap:14px"><span data-mirror="logo-sona" style="position:relative;display:inline-flex;width:36px;height:36px;border-radius:8px;overflow:hidden;background:#2E4A5C;background-size:cover;background-position:center;flex:none"><span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:600;letter-spacing:0.03em">SO</span></span>Sonalysts</span><span style="display:inline-flex;align-items:center;gap:14px"><span data-mirror="logo-vtech" style="position:relative;display:inline-flex;width:36px;height:36px;border-radius:8px;overflow:hidden;background:#5B3E8E;background-size:cover;background-position:center;flex:none"><span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:600;letter-spacing:0.03em">VT</span></span>VTech</span>
-      </div>
-    </div>
-  </div>
+  
 
   <section id="work" style="padding-bottom:40px">
     <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:48px">
@@ -262,7 +247,7 @@ class Component extends DCLogic {
           a.href = item.href;
           a.textContent = item.label;
           if (/^https?:/.test(item.href)) { a.target = '_blank'; a.rel = 'noopener'; }
-          a.style.cssText = 'color:#6E6A61;text-decoration:none';
+          a.style.cssText = 'color:#6E6A61;text-decoration:none;white-space:nowrap';
           a.addEventListener('mouseenter', () => { a.style.color = '#17181A'; });
           a.addEventListener('mouseleave', () => { a.style.color = '#6E6A61'; });
           nav.appendChild(a);
