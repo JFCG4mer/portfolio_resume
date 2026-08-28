@@ -41,6 +41,46 @@
   a:hover { color: #17181A; }
   ::selection { background: #1F4E46; color: #F5F2EC; }
 
+  /* Section headings pin below the nav; each releases when the next arrives. */
+  :root { --navh: 76px; }
+  [data-sticky-head] {
+    position: sticky;
+    top: var(--navh);
+    z-index: 20;
+    /* A deliberate band: full-bleed, its own tone, with a defining rule.
+       !important because the headings carry inline margin shorthands. */
+    margin-left: calc(-1 * clamp(20px, 5vw, 40px)) !important;
+    margin-right: calc(-1 * clamp(20px, 5vw, 40px)) !important;
+    padding: 24px clamp(20px, 5vw, 40px) 22px !important;
+    background: #E8E4DA;
+    border-bottom: 1px solid rgba(23, 24, 26, 0.10);
+  }
+  #contact [data-sticky-head] {
+    background: #14201B;
+    border-bottom-color: rgba(245, 242, 236, 0.14);
+  }
+
+  @media (max-width: 899px) {
+    /* Single column: the resume intro must not hover over its own content. */
+    [data-resume-col] { position: static !important; top: auto !important; }
+    [data-sticky-head-mobile] {
+      position: sticky;
+      top: var(--navh);
+      z-index: 20;
+      margin-left: calc(-1 * clamp(20px, 5vw, 40px)) !important;
+      margin-right: calc(-1 * clamp(20px, 5vw, 40px)) !important;
+      padding: 18px clamp(20px, 5vw, 40px) 16px !important;
+      background: #E8E4DA;
+      border-bottom: 1px solid rgba(23, 24, 26, 0.10);
+    }
+  }
+
+  /* Mobile nav: 3 links on the first row, 2 on the second, both centred. */
+  [data-nav] .nav-break { display: none; flex-basis: 100%; height: 0; }
+  @media (max-width: 700px) {
+    [data-nav] .nav-break { display: block; }
+  }
+
   /* Project rail — desktop and tablet only; mobile stays single-column. */
   @media (min-width: 900px) {
     [data-work-layout] {
@@ -53,8 +93,8 @@
     [data-rail] {
       display: block !important;
       position: sticky;
-      top: 118px;
-      max-height: calc(100vh - 150px);
+      top: calc(var(--navh) + var(--headh, 76px) + 28px);
+      max-height: calc(100vh - var(--navh) - var(--headh, 76px) - 60px);
       overflow-y: auto;
       padding-left: 2px;
       border-left: 1px solid rgba(23,24,26,0.12);
@@ -165,7 +205,7 @@
   </div>
 
   <section id="work" style="padding-bottom:40px">
-    <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:48px">
+    <div data-sticky-head style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:48px">
       <h2 style="font-family:Newsreader,serif;font-weight:400;font-size:34px;margin:0;letter-spacing:-0.01em" data-cms="sections.workHeading">Selected work</h2>
       <span style="font-size:12.5px;letter-spacing:0.14em;text-transform:uppercase;color:#6E6A61" data-cms="sections.workMeta">2007 — Present</span>
     </div>
@@ -245,7 +285,7 @@
   </section>
 
   <section id="experience" style="padding:130px 0 40px">
-    <h2 style="font-family:Newsreader,serif;font-weight:400;font-size:34px;margin:0 0 48px;letter-spacing:-0.01em" data-cms="sections.experienceHeading">Experience</h2>
+    <h2 data-sticky-head style="font-family:Newsreader,serif;font-weight:400;font-size:34px;margin:0 0 48px;letter-spacing:-0.01em" data-cms="sections.experienceHeading">Experience</h2>
     <sc-for list="{{ roles }}" as="r" hint-placeholder-count="8">
       <div data-reveal="" data-row="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px 32px;padding:26px 12px 26px 0;border-top:1px solid rgba(23,24,26,0.12);transition:background 260ms ease,padding 260ms ease" style-hover="background:rgba(31,78,70,0.05);padding-left:12px">
         <div style="font-size:13.5px;color:#6E6A61;padding-top:4px">{{ r.dates }}</div>
@@ -264,8 +304,8 @@
 
   <section id="resume" style="padding:130px 0 40px">
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:44px 56px;align-items:start">
-      <div style="position:sticky;top:110px">
-        <h2 style="font-family:Newsreader,serif;font-weight:400;font-size:34px;margin:0 0 18px;letter-spacing:-0.01em" data-cms="sections.resumeHeading">Resume</h2>
+      <div data-resume-col style="position:sticky;top:110px">
+        <h2 data-sticky-head-mobile style="font-family:Newsreader,serif;font-weight:400;font-size:34px;margin:0 0 18px;letter-spacing:-0.01em" data-cms="sections.resumeHeading">Resume</h2>
         <p style="font-size:16px;line-height:1.6;color:#4A4740;margin:0 0 24px" data-cms="sections.resumeIntro">Education, certification, and the products behind the work.</p>
         <div style="display:flex;flex-direction:column;align-items:flex-start;gap:12px"><a data-link="resume" href="https://drive.google.com/file/d/1u9_no07YNnlS9O1cdkO1dfUU6ZrArpSP/view" target="_blank" rel="noopener" data-magnetic="" style="display:inline-flex;align-items:center;padding:14px 26px;background:#17181A;color:#F5F2EC;border-radius:2px;font-size:14.5px" style-hover="background:#1F4E46">Download PDF</a><a data-link="portfolioPdf" href="/resume/Jamie-Carlson-Product-Portfolio.pdf" target="_blank" rel="noopener" data-magnetic="" style="display:inline-flex;align-items:center;padding:14px 26px;border:1px solid rgba(23,24,26,0.28);color:#17181A;border-radius:2px;font-size:14.5px;text-decoration:none;transition:background 200ms ease,border-color 200ms ease" style-hover="border-color:#17181A;background:rgba(23,24,26,0.05)">Download Product Portfolio (PDF)</a></div>
       </div>
@@ -292,7 +332,7 @@
 
 
   <section id="contact" style="position:relative;margin:120px calc(-1 * clamp(20px,5vw,40px)) 0;padding:clamp(70px,9vw,110px) clamp(20px,5vw,40px) 70px;background:#17251F;color:#F5F2EC;border-radius:4px">
-    <h2 style="font-family:Newsreader,serif;font-weight:400;font-size:clamp(34px,5vw,60px);line-height:1.1;margin:0 0 28px;max-width:760px;letter-spacing:-0.02em" data-cms="sections.contactHeading">Open to product leadership roles.</h2>
+    <h2 style="font-family:Newsreader,serif;font-weight:400;font-size:clamp(34px,5vw,60px);line-height:1.1;margin:0 0 28px;max-width:760px;letter-spacing:-0.02em" data-sticky-head data-cms="sections.contactHeading">Open to product leadership roles.</h2>
     <div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:70px">
       <a data-link="linkedin" href="https://www.linkedin.com/in/jamie-carlson-b480341/" target="_blank" rel="noopener" data-magnetic="" style="display:inline-flex;padding:14px 26px;background:#F5F2EC;color:#17251F;border-radius:2px;font-size:14.5px;font-weight:500" style-hover="background:#D9CFA8">Connect on LinkedIn</a>
       <a data-link="resume" href="https://drive.google.com/file/d/1u9_no07YNnlS9O1cdkO1dfUU6ZrArpSP/view" target="_blank" rel="noopener" data-magnetic="" style="display:inline-flex;padding:14px 26px;border:1px solid rgba(245,242,236,0.32);color:#F5F2EC;border-radius:2px;font-size:14.5px" style-hover="border-color:#F5F2EC;background:rgba(245,242,236,0.08)">Resume (PDF)</a>
@@ -415,6 +455,28 @@ class Component extends DCLogic {
       this._railSpy = spy;
     })();
 
+    // Section headings pin directly beneath the nav, whatever height it is.
+    (() => {
+      const navBar = root.querySelector('nav');
+      if (!navBar) return;
+      const head = root.querySelector('#work [data-sticky-head]');
+      const setH = () => {
+        const h = Math.round(navBar.getBoundingClientRect().height);
+        if (h) document.documentElement.style.setProperty('--navh', h + 'px');
+        if (head) {
+          const hh = Math.round(head.getBoundingClientRect().height);
+          if (hh) document.documentElement.style.setProperty('--headh', hh + 'px');
+        }
+      };
+      setH();
+      if (!this._navRO && window.ResizeObserver) {
+        this._navRO = new ResizeObserver(setH);
+        this._navRO.observe(navBar);
+        if (head) this._navRO.observe(head);
+      }
+      window.addEventListener('resize', setH, { passive: true });
+    })();
+
     const port = root.querySelector('[data-portrait]');
     if (port && cfg.portrait && port.getAttribute('src') !== cfg.portrait) port.src = cfg.portrait;
     // Navigation
@@ -424,7 +486,13 @@ class Component extends DCLogic {
       if (nav.dataset.built !== want) {
         nav.dataset.built = want;
         nav.innerHTML = '';
-        cfg.nav.forEach(item => {
+        cfg.nav.forEach((item, ni) => {
+          // Break the row after the third link so mobile reads 3 + 2, centred.
+          if (ni === 3) {
+            const br = document.createElement('span');
+            br.className = 'nav-break';
+            nav.appendChild(br);
+          }
           const a = document.createElement('a');
           a.href = item.href;
           a.textContent = item.label;

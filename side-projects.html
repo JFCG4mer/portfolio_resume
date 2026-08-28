@@ -42,6 +42,22 @@
   a:hover { color: #17181A; }
   ::selection { background: #1F4E46; color: #F5F2EC; }
 
+  :root { --navh: 76px; }
+  [data-sticky-head] {
+    position: sticky;
+    top: var(--navh);
+    z-index: 20;
+    margin-left: calc(-1 * clamp(20px, 5vw, 40px)) !important;
+    margin-right: calc(-1 * clamp(20px, 5vw, 40px)) !important;
+    padding: 24px clamp(20px, 5vw, 40px) 22px !important;
+    background: #E8E4DA;
+    border-bottom: 1px solid rgba(23, 24, 26, 0.10);
+  }
+  [data-nav] .nav-break { display: none; flex-basis: 100%; height: 0; }
+  @media (max-width: 700px) {
+    [data-nav] .nav-break { display: block; }
+  }
+
   /* Mobile nav: logo centered on its own line, links centered and balanced below. */
   @media (max-width: 700px) {
     nav[style*="sticky"] { justify-content: center; }
@@ -94,7 +110,7 @@
   
 
   <section id="work" style="padding-bottom:40px">
-    <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:48px">
+    <div data-sticky-head style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:48px">
       <h2 style="font-family:Newsreader,serif;font-weight:400;font-size:34px;margin:0;letter-spacing:-0.01em" data-cms="sections.workHeading">Selected work</h2>
       <span style="font-size:12.5px;letter-spacing:0.14em;text-transform:uppercase;color:#6E6A61" data-cms="sections.workMeta">2007 — Present</span>
     </div>
@@ -233,6 +249,21 @@ class Component extends DCLogic {
         el.appendChild(a);
       });
     });
+    (() => {
+      const navBar = root.querySelector('nav');
+      if (!navBar) return;
+      const setH = () => {
+        const h = Math.round(navBar.getBoundingClientRect().height);
+        if (h) document.documentElement.style.setProperty('--navh', h + 'px');
+      };
+      setH();
+      if (!this._navRO && window.ResizeObserver) {
+        this._navRO = new ResizeObserver(setH);
+        this._navRO.observe(navBar);
+      }
+      window.addEventListener('resize', setH, { passive: true });
+    })();
+
     const port = root.querySelector('[data-portrait]');
     if (port && cfg.portrait && port.getAttribute('src') !== cfg.portrait) port.src = cfg.portrait;
     // Navigation
@@ -242,7 +273,12 @@ class Component extends DCLogic {
       if (nav.dataset.built !== want) {
         nav.dataset.built = want;
         nav.innerHTML = '';
-        cfg.nav.forEach(item => {
+        cfg.nav.forEach((item, ni) => {
+          if (ni === 3) {
+            const br = document.createElement('span');
+            br.className = 'nav-break';
+            nav.appendChild(br);
+          }
           const a = document.createElement('a');
           a.href = item.href;
           a.textContent = item.label;
