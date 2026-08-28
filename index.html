@@ -41,6 +41,52 @@
   a:hover { color: #17181A; }
   ::selection { background: #1F4E46; color: #F5F2EC; }
 
+  /* Project rail — desktop and tablet only; mobile stays single-column. */
+  @media (min-width: 900px) {
+    [data-work-layout] {
+      display: grid !important;
+      grid-template-columns: 172px minmax(0, 1fr) !important;
+      gap: 44px;
+      align-items: start;
+    }
+    [data-work-list] > * { min-width: 0; }
+    [data-rail] {
+      display: block !important;
+      position: sticky;
+      top: 118px;
+      max-height: calc(100vh - 150px);
+      overflow-y: auto;
+      padding-left: 2px;
+      border-left: 1px solid rgba(23,24,26,0.12);
+    }
+    [data-rail] button {
+      display: block;
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: 0;
+      border-left: 2px solid transparent;
+      margin-left: -3px;
+      padding: 8px 0 8px 14px;
+      font: inherit;
+      font-size: 12.5px;
+      line-height: 1.35;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #9A968C;
+      cursor: pointer;
+      transition: color 200ms ease, border-color 200ms ease;
+    }
+    [data-rail] button:hover { color: #17181A; }
+    [data-rail] button[aria-current="true"] {
+      color: #1F4E46;
+      border-left-color: #1F4E46;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    [data-rail] button { transition: none; }
+  }
+
   /* Mobile nav: logo centered on its own line, links centered and balanced below. */
   @media (max-width: 700px) {
     nav[style*="sticky"] { justify-content: center; }
@@ -124,6 +170,9 @@
       <span style="font-size:12.5px;letter-spacing:0.14em;text-transform:uppercase;color:#6E6A61" data-cms="sections.workMeta">2007 — Present</span>
     </div>
 
+    <div data-work-layout>
+    <nav data-rail aria-label="Jump to project" style="display:none"></nav>
+    <div data-work-list style="min-width:0">
     <sc-for list="{{ projectsWithMedia }}" as="p" hint-placeholder-count="1">
       <article data-reveal="" style="margin-bottom:110px;padding:16px 16px 30px;border:1px solid rgba(23,24,26,0.1);border-radius:6px;background:rgba(255,255,255,0.42)">
         <div data-carousel data-key="{{ p.key }}" style="position:relative;width:100%;aspect-ratio:3/2;background:#14171A;margin-bottom:28px;overflow:hidden;border-radius:3px;box-shadow:0 18px 44px -30px rgba(23,24,26,0.5)">
@@ -191,6 +240,8 @@
         </div>
       </article>
     </sc-for>
+    </div>
+    </div>
   </section>
 
   <section id="experience" style="padding:130px 0 40px">
@@ -311,6 +362,59 @@ class Component extends DCLogic {
         el.appendChild(a);
       });
     });
+    // ---- Project rail: builds from rendered cards, tracks scroll position ----
+    (() => {
+      const rail = root.querySelector('[data-rail]');
+      if (!rail || window.matchMedia('(max-width: 899px)').matches) return;
+      const cards = [...root.querySelectorAll('#work article')].filter(a => a.querySelector('[data-key]'));
+      const sig = cards.map(c => c.querySelector('[data-key]').getAttribute('data-key')).join(',');
+      if (!cards.length || rail.dataset.built === sig) return;
+      rail.dataset.built = sig;
+      rail.innerHTML = '';
+
+      const byKey = {};
+      (cfg.projects || []).forEach(p => { byKey[p.key] = p; });
+
+      // Where one company has several projects, label by project instead of company.
+      const orgCount = {};
+      cards.forEach(c => {
+        const k = c.querySelector('[data-key]').getAttribute('data-key');
+        const org = (byKey[k] && byKey[k].org) || k;
+        orgCount[org] = (orgCount[org] || 0) + 1;
+      });
+
+      cards.forEach((card, i) => {
+        const key = card.querySelector('[data-key]').getAttribute('data-key');
+        if (!card.id) card.id = 'project-' + key;
+        const p = byKey[key] || {};
+        const org = p.org || key;
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.textContent = orgCount[org] > 1 ? (p.title || org) : org;
+        b.title = [p.org, p.title].filter(Boolean).join(' — ');
+        b.setAttribute('aria-current', i === 0 ? 'true' : 'false');
+        b.addEventListener('click', () => {
+          card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+        rail.appendChild(b);
+      });
+
+      const buttons = [...rail.querySelectorAll('button')];
+      const mark = (idx) => buttons.forEach((b, i) =>
+        b.setAttribute('aria-current', i === idx ? 'true' : 'false'));
+
+      // Highlight whichever card occupies the upper third of the viewport.
+      const spy = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (!e.isIntersecting) return;
+          const idx = cards.indexOf(e.target);
+          if (idx > -1) mark(idx);
+        });
+      }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+      cards.forEach(c => spy.observe(c));
+      this._railSpy = spy;
+    })();
+
     const port = root.querySelector('[data-portrait]');
     if (port && cfg.portrait && port.getAttribute('src') !== cfg.portrait) port.src = cfg.portrait;
     // Navigation
