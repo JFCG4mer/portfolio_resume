@@ -729,6 +729,19 @@ body.auth-open { overflow: hidden; }
 .rx-addicon { width: 22px; height: 22px; }
 .rx[data-action="react-more"]:hover { border-color: #9DBEF3; color: var(--blue); }
 
+/* rev25: top bar fits on mobile */
+html, body { max-width: 100%; overflow-x: hidden; }
+.cd-short { display: none; }
+.site-bar { flex-wrap: wrap; row-gap: 10px; }
+@media (max-width: 760px) {
+  .site-bar { padding: 10px 14px; }
+  .viewas { width: 100%; margin-left: 0; gap: 8px; }
+  .viewas .seg--dark { flex: 1; min-width: 0; }
+  .viewas .seg--dark button { flex: 1; padding: 7px 6px; font-size: 12px; white-space: nowrap; }
+  .viewas .clear-data { margin-left: 0; flex: none; }
+  .cd-long { display: none; } .cd-short { display: inline; }
+}
+
 </style>
 </head>
 <body>
@@ -2452,7 +2465,7 @@ window.FP_RAW = {"rankings": [{"sport": "NFL", "type": "Weekly", "ranking_type_n
         <button aria-pressed="${isNew()}" data-action="view-as" data-v="new" title="Just joined: no activity yet">New member</button>
         <button aria-pressed="${signedOut()}" data-action="view-as" data-v="out">Signed out</button>
       </div>
-      <button class="clear-data" data-action="clear-data" title="Reset the demo to its default state">Clear all user data</button>`;
+      <button class="clear-data" data-action="clear-data" title="Reset the demo to its default state" aria-label="Clear all user data"><span class="cd-long">Clear all user data</span><span class="cd-short">Reset</span></button>`;
   }
 
   function tabBody() {
